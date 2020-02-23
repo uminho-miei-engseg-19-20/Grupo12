@@ -17,7 +17,6 @@ Para executar o código foi necessário, primeiramente, gerar  o par de chaves u
 A resposta do programa foi:
 
 ```
-
 $python createSharedSecret-app.py 8 5 123 mykey.pem  
 Private key passphrase: 1234  
 Secret: Agora temos um segredo extremamente confidencial  
