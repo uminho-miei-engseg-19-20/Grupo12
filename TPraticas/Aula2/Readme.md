@@ -39,4 +39,6 @@ eyJhbGciOiAiUlMyNTYifQ.eyJvYmplY3QiOiBbIjgtNDIzYzViMzg4MjZkZmJkNjQyODU5MWFlZWEyM
 ```
 Após a execução do programa, foi gerado o certificado necessário para recuperar o segredo, através do comando `openssl req -key mykey.pem -new -x509 -days 365 -out mykey.crt`.
 
+
+**Pergunta 2.1B)**
 No recoverSecretFromAllComponents-app.py são necessárias todas as partes para voltar a reconstruir o segredo, enquanto que recoverSecretFromComponents-app.py apenas são necessárias algumas partes para reconstruir o segredo. Caso o segredo guardado seja de extrema importância, torna-se necessário a utilização do recoverSecretFromAllComponents-app.py, onde apenas se todos os componentes disponibilizarem suas partes, o segredo é recuperado, como explicado anteriormente. Já o recoverSecretFromComponents-app.py, é uma forma de assegurar que o segredo será reconstruído, mesmo que alguns dos componentes perca sua chave.
