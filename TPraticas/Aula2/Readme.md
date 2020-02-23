@@ -166,9 +166,9 @@ Certificate:
 
 Os algoritmos utilizados e o tamanho das chaves, como mostra o *output* do comando acima, são:
 
-*Algoritmo de assinatura:* RSA com SHA256
+**Algoritmo de assinatura:** RSA com SHA256
 
-*Algoritmo de geração da chave pública:* RSA
+**Algoritmo de geração da chave pública:** RSA
 
-*Tamanho da chave:* 2048bit
+**Tamanho da chave:** 2048bit
 
