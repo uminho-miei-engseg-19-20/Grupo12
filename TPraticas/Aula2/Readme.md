@@ -61,7 +61,7 @@ Após a execução do programa, foi gerado o certificado necessário para recupe
 **Pergunta 2.1B)**
 No recoverSecretFromAllComponents-app.py são necessárias todas as partes para voltar a reconstruir o segredo, enquanto que recoverSecretFromComponents-app.py apenas são necessárias algumas partes para reconstruir o segredo. Caso o segredo guardado seja de extrema importância, torna-se necessário a utilização do recoverSecretFromAllComponents-app.py, onde todos os componentes necessitam de disponibilizar as suas partes e de seguida o segredo é recuperado, como explicado anteriormente. Já o recoverSecretFromComponents-app.py, é uma forma de assegurar que o segredo será reconstruído, mesmo que alguns dos componentes perca sua chave.
 
-Primeiramente, executamos o script recoverSecretFromComponents-app.py utilizando os componentes 1, 3, 5, 7 e 8 para recuperar o segredo, juntamente com o certificado gerado anteriormente. 
+Primeiramente, executamos o script recoverSecretFromComponents-app.py utilizando os componentes 1, 3, 5, 7 e 8 para recuperar o segredo, o número de partes que serão utilizadas, o identificador do segredo e o certificado gerado anteriormente. 
 
 A resposta do programa foi:
 
