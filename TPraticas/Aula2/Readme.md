@@ -7,3 +7,8 @@ Nos sistemas operativos Unix, /dev/random e /dev/urandom são ficheiros especiai
 Isto deve-se ao facto de o gerador conter uma estimativa dos números bits de ruído que devem estar dentro da entropia, e por vezes os valores obtidos podem estar abaixo da estimativa, e no caso do /dev/random este bloqueia, porém o /dev/urandom não bloqueia e utiliza os bits obtidos para gerar mais bits pseudo-aleatórios, o que significa que este irá devolver sempre um valor pseudo aleatório quado chamado, embora por vezes com menor entropia ou seja menos aleatório que o /dev/random.
 
 Ambos os ficheiros utilizam o algoritmo de Yarrow ou um aloritmo baseado no Yarrow porém a sua implementação dependerá da distribuição de Unix.
+
+
+**Pergunta 2.1A)**
+Após uma análise e execução dos programas concluimos que para efetuar a divisão do segredo em 8 partes com quorom de 5 para reconstruir o segredo devemos passar ambos os valores como argumento.
+----codigo-----
