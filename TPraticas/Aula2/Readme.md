@@ -173,4 +173,5 @@ Os algoritmos utilizados e o tamanho das chaves, como mostra o *output* do coman
 **Tamanho da chave:** 2048bit
 
 Segundo o NIST, o RSA deve ser usado com uma chave de no mínimo 2048 bit, ou seja, a chave utilizada neste certificado estaria dentro do limite aceitável. Porém, ainda de acordo o NIST, o tamanho da chave utilizada no RSA deve ser de no mínimo 3072 bit se caso sua utilização ultrapasse o ano de 2030.  
-Neste caso, como o certificado é válido até o dia 05 de setembro de 2032, seria mais seguro utilizar uma chave de no mínimo 3072 bit.
+Neste caso, como o certificado é válido até o dia 05 de setembro de 2032, seria mais seguro utilizar uma chave de no mínimo 3072 bit.  
+O *hash* SHA256 utilizado é considerado seguro e seu uso neste se adequa a esse certificado.
