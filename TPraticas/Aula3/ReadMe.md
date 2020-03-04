@@ -5,8 +5,8 @@ Para a pergunta 2, foi-nos pedido que escolhessemos dois sites de empresas não 
 ##### i. Resultados
 As empresas escolhidas foram AkzoNobel e AJAX, os resultados dos testes encontram-se no repositório:
 
-[AkzoNobel](./akzo.pdf)
-[AJAX](./AJAX.pdf)
+[AkzoNobel](./akzo.pdf)    
+[AJAX](./ajax.pdf)
 
 ##### ii. Análise do resultado do SSL Server test relativo ao site com pior rating
 Neste caso, o website com pior rating foi o do AJAX. O site do AJAX teve uma excelente classificação A, mas não uma classificação A+, ou seja perfeita, como no outro caso analisado.
