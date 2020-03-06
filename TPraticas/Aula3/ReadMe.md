@@ -2,47 +2,51 @@
 ## Pergunta 1.1
 Para a realização da pergunta 1.1, foi primeiro gerados o par de chaves e o certificado utilizando o openssl através dos comandos listados na Experiência 1.1. Feito isto, os códigos disponibilizados foram alterados da seguinte forma:
 
+
+
 - Assinante:  
   - [init-app.py](./E01/init-app.py):  
-  Pode ser usado de duas formas:
+    Pode ser usado de duas formas:
 
-  `init-app.py`  
+    `init-app.py`  
   
-  Devolve o R' (pRDashComponents)  
+    Devolve o R' (pRDashComponents)  
 
-  `init-app.py -init`  
+    `init-app.py -init`  
   
-  Inicializa as componentes *InitComponents* e *pRDashComponents* e guarda-as no ficheiro [signerFile.txt](./E01/signerFile.txt)
+    Inicializa as componentes *InitComponents* e *pRDashComponents* e guarda-as no ficheiro [signerFile.txt](./E01/signerFile.txt)
 
 
   - [blindSignature-app.py](./E01/blindSignature-app.py):
 
-  `blindSignature-app.py -key <chave privada> -bmsg <Blind message>`
+    `blindSignature-app.py -key <chave privada> -bmsg <Blind message>`
 
-  Recebe a *chave privada* e a *blind message* como parâmetro, lê o *initComponent* do ficheiro [signerFile.txt](./E01/signerFile.txt) e devolve o *blind signature*.
+    Recebe a *chave privada* e a *blind message* como parâmetro, lê o *initComponent* do ficheiro [signerFile.txt](./E01/signerFile.txt) e devolve o *blind signature*.  
+
 
 
 - Requerente:  
   - [ofusca-app.py](./E01/ofusca-app.py):   
 
-  `ofusca-app.py -msg <mensagem a assinar> -RDash <pRDashComponents>`  
+    `ofusca-app.py -msg <mensagem a assinar> -RDash <pRDashComponents>`  
 
-  Recebe a *mensagem a ser assinada* e o *PRDashComponent*, guarda *blind components* e *pRComponents* no ficheiro [requesterFile.txt](./E01/requesterFile.txt) e devolve a *blind message*.
+    Recebe a *mensagem a ser assinada* e o *PRDashComponent*, guarda *blind components* e *pRComponents* no ficheiro [requesterFile.txt](./E01/requesterFile.txt) e devolve a *blind message*.
 
 
   - [deofusca-app.py](./E01/deofusca-app.py):  
 
-  `desofusca-app.py -s <Blind Signature> -RDash <pRDashComponents>`  
+    `desofusca-app.py -s <Blind Signature> -RDash <pRDashComponents>`  
 
-  Recebe a *blind signature* e *pRDashComponents*, lê o *blindComponents* do ficheiro [requesterFile.txt](./E01/requesterFile.txt) e devolte a *signature*.  
+    Recebe a *blind signature* e *pRDashComponents*, lê o *blindComponents* do ficheiro [requesterFile.txt](./E01/requesterFile.txt) e devolte a *signature*.  
+
 
 
 - Verificador:  
   - [verify-app.py](./E01/verify-app.py):  
 
-  `verify-app.py -cert <certificado do assinante> -msg <mensagem original a assinar> -sDash <Signature> -f <ficheiro do requerente>`  
+    `verify-app.py -cert <certificado do assinante> -msg <mensagem original a assinar> -sDash <Signature> -f <ficheiro do requerente>`  
 
-  Recebe o *certificado do assinante*, a *mensagem original a assinar*, a *signature* e o ficheiro [requesterFile.txt](./E01/requesterFile.txt) e imprime *Valid signature* se a assinatura sDash sobre a mensagem *msg* é válida ou *Invalid signature* se a assinatura não for válida.  
+    Recebe o *certificado do assinante*, a *mensagem original a assinar*, a *signature* e o ficheiro [requesterFile.txt](./E01/requesterFile.txt) e imprime *Valid signature* se a assinatura sDash sobre a mensagem *msg* é válida ou *Invalid signature* se a assinatura não for válida.  
 
 Exemplo de utilização:  
 
