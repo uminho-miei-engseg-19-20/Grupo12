@@ -8,13 +8,13 @@ Para a realização da pergunta 1.1, foi primeiro gerados o par de chaves e o ce
   - [init-app.py](./E01/init-app.py):  
     Pode ser usado de duas formas:
 
-    `init-app.py`  
+    1 - `init-app.py`:  
   
     Devolve o R' (pRDashComponents)  
 
-    `init-app.py -init`  
+    2 - `init-app.py -init`:  
   
-    Inicializa as componentes *InitComponents* e *pRDashComponents* e guarda-as no ficheiro [signerFile.txt](./E01/signerFile.txt)
+    Inicializa as componentes *InitComponents* e *pRDashComponents*, devolve a *pRDashComponents e guarda-as no ficheiro [signerFile.txt](./E01/signerFile.txt)
 
 
   - [blindSignature-app.py](./E01/blindSignature-app.py):
