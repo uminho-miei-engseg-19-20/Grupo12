@@ -48,8 +48,17 @@ Para a realização da pergunta 1.1, foi primeiro gerados o par de chaves e o ce
 
     Recebe o *certificado do assinante*, a *mensagem original a assinar*, a *signature* e o ficheiro [requesterFile.txt](./E01/requesterFile.txt) e imprime *Valid signature* se a assinatura sDash sobre a mensagem *msg* é válida ou *Invalid signature* se a assinatura não for válida.  
 
-Exemplo de utilização:  
+Exemplo de utilização:
 
+- **Inicialização:**  
+
+- **Ofuscação:**  
+
+- **Assinatura:**  
+
+- **desofuscação:**  
+
+- **Verificação:**  
 
 # Exercício 2 - Protocolo SSL/TLS
 ## Pergunta 2.1
