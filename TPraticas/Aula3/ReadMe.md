@@ -1,3 +1,10 @@
+# Exercício 1 - Assinaturas cegas (Blind signatures) baseadas no Elliptic Curve Discrete Logarithm Problem (ECDLP)
+## Pergunta 1.1
+Para a realização da pergunta 1.1, foi primeiro gerados o par de chaves e o certificado utilizando o openssl através dos comandos listados na Experiência 1.1. Feito isto, os códigos disponibilizados foram alterados da seguinte forma:
+
+[init-app.py](./Exercício 01/init-app.py)    
+[AJAX](./ajax.pdf)
+
 # Exercício 2 - Protocolo SSL/TLS
 ## Pergunta 2.1
 Para a pergunta 2, foi-nos pedido que escolhessemos dois sites de empresas não bancárias e não portuguesas cotadas na Euronext. Depois de escolhidosera foi realizado um SSL Server test a cada um dos websites, usando o site SSL labs.
