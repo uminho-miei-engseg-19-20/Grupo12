@@ -2,7 +2,7 @@
 ## Pergunta 1.1
 Para a realização da pergunta 1.1, foi primeiro gerados o par de chaves e o certificado utilizando o openssl através dos comandos listados na Experiência 1.1. Feito isto, os códigos disponibilizados foram alterados da seguinte forma:
 
-[init-app.py](/E01/init-app.py)    
+[init-app.py](./E01/init-app.py)    
 [AJAX](./ajax.pdf)
 
 # Exercício 2 - Protocolo SSL/TLS
