@@ -35,6 +35,7 @@ initComponents from STDIN and writes Blind signature to STDOUT.
 from eVotUM.Cripto import utils
 import sys
 from eVotUM.Cripto import eccblind
+import getpass
 
 
 def printUsage():
@@ -72,7 +73,7 @@ def main(eccPrivateKeyPath, blindM):
     initComponents = file[16: file.find('\n')]
     pemKey = utils.readFile(eccPrivateKeyPath)
     print("Input")
-    passphrase = raw_input("Passphrase: ")
+    passphrase = getpass.getpass(prompt="Passphrase: ")
     errorCode, blindSignature = eccblind.generateBlindSignature(pemKey, passphrase, blindM, initComponents)
     showResults(errorCode, blindSignature)
 

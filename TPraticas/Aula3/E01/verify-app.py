@@ -43,13 +43,13 @@ def printUsage():
 
 
 def parseArgs():
-    if len(sys.argv) != 9:
+    if len(sys.argv) < 9:
         printUsage()
     else:
         eccPublicKeyPath = sys.argv[2]
-        data = sys.argv[4]
-        sDash = sys.argv[6]
-        with open(sys.argv[8], 'r') as f:
+        data = ' '.join(sys.argv[4:-4])
+        sDash = sys.argv[-3]
+        with open(sys.argv[-1], 'r') as f:
             requesterFile = f.read()
         main(eccPublicKeyPath, data, sDash, requesterFile)
 

@@ -62,6 +62,7 @@ def main(choice):
             p = 'pRDashComponents: ' + pRDashComponents + '\n'
             f.write(i)
             f.write(p)
+            print("pRDashComponents: %s" % pRDashComponents)
             print('initComponents and pRDashComponents initiated and stored in signerFile.txt.')
 
 

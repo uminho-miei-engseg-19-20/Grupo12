@@ -41,11 +41,12 @@ def printUsage():
 
 
 def parseArgs():
-    if len(sys.argv) != 5:
+    if len(sys.argv) < 5:
         printUsage()
     else:
-        data = sys.argv[2]
-        RDash = sys.argv[4]
+        data = ' '.join(sys.argv[2:-2])
+        print(data)
+        RDash = sys.argv[-1]
         main(data, RDash)
 
 
