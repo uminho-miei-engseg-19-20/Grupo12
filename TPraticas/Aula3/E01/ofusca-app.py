@@ -41,8 +41,9 @@ def printUsage():
 
 
 def parseArgs():
-    if len(sys.argv) < 5:
+    if len(sys.argv) < 5 or sys.argv[-2] != '-RDash' or sys.argv[1] != '-msg':
         printUsage()
+        
     else:
         data = ' '.join(sys.argv[2:-2])
         RDash = sys.argv[-1]
