@@ -10,18 +10,18 @@ Para a realização da pergunta 1.1, foi primeiro gerados o par de chaves e o ce
 
     1 - `init-app.py`:  
   
-    Devolve o R' (pRDashComponents)  
+    Devolve o R' (*pRDashComponents*)  
 
     2 - `init-app.py -init`:  
   
-    Inicializa as componentes *InitComponents* e *pRDashComponents*, devolve a *pRDashComponents e guarda-as no ficheiro [signerFile.txt](./E01/signerFile.txt)
+    Inicializa as componentes *InitComponents* e *pRDashComponents*, devolve o R' (*pRDashComponents*) e guarda-as no ficheiro [signerFile.txt](./E01/signerFile.txt)
 
 
   - [blindSignature-app.py](./E01/blindSignature-app.py):
 
     `blindSignature-app.py -key <chave privada> -bmsg <Blind message>`
 
-    Recebe a *chave privada* e a *blind message* como parâmetro, lê o *initComponent* do ficheiro [signerFile.txt](./E01/signerFile.txt) e devolve o *blind signature*.  
+    Recebe a *chave privada* e a *blind message* como parâmetro, lê o *initComponent* do ficheiro [signerFile.txt](./E01/signerFile.txt) e devolve o s (*blind signature*).  
 
 
 
@@ -30,14 +30,14 @@ Para a realização da pergunta 1.1, foi primeiro gerados o par de chaves e o ce
 
     `ofusca-app.py -msg <mensagem a assinar> -RDash <pRDashComponents>`  
 
-    Recebe a *mensagem a ser assinada* e o *PRDashComponent*, guarda *blind components* e *pRComponents* no ficheiro [requesterFile.txt](./E01/requesterFile.txt) e devolve a *blind message*.
+    Recebe a *mensagem a ser assinada* e o *PRDashComponent*, guarda *blind components* e *pRComponents* no ficheiro [requesterFile.txt](./E01/requesterFile.txt) e devolve o m' (*blind message*).
 
 
   - [deofusca-app.py](./E01/deofusca-app.py):  
 
     `desofusca-app.py -s <Blind Signature> -RDash <pRDashComponents>`  
 
-    Recebe a *blind signature* e *pRDashComponents*, lê o *blindComponents* do ficheiro [requesterFile.txt](./E01/requesterFile.txt) e devolte a *signature*.  
+    Recebe a *blind signature* e *pRDashComponents*, lê o *blindComponents* do ficheiro [requesterFile.txt](./E01/requesterFile.txt) e devolte s' (*signature*).  
 
 
 
