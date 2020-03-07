@@ -45,7 +45,6 @@ def parseArgs():
         printUsage()
     else:
         data = ' '.join(sys.argv[2:-2])
-        print(data)
         RDash = sys.argv[-1]
         main(data, RDash)
 
