@@ -4,5 +4,7 @@ Não é possível garantir que o utilizador conseguirá um IP localizado nos EUA
 
 ## Pergunta 1.2  
 
-O site The Hidden Wiki (http://zqktlwi4fecvo6ri.onion/wiki/index.php/Main_Page) foi escolhido para verificar o circuito.   estabelecido.
+O site The Hidden Wiki (http://zqktlwi4fecvo6ri.onion/wiki/index.php/Main_Page) foi escolhido para verificar o circuito estabelecido.  
+
+
 ![The Hidden Wiki](./img/the_hidden_wiki.png)
