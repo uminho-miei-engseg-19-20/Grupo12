@@ -4,7 +4,7 @@ Para a realização da pergunta 1.1, foi primeiro gerados o par de chaves e o ce
 
 
 
-- Assinante:  
+- **Assinante:**  
   - [init-app.py](./E01/init-app.py):  
     Pode ser usado de duas formas:
 
@@ -25,7 +25,7 @@ Para a realização da pergunta 1.1, foi primeiro gerados o par de chaves e o ce
 
 
 
-- Requerente:  
+- **Requerente:**  
   - [ofusca-app.py](./E01/ofusca-app.py):   
 
     `ofusca-app.py -msg <mensagem a assinar> -RDash <pRDashComponents>`  
@@ -41,7 +41,7 @@ Para a realização da pergunta 1.1, foi primeiro gerados o par de chaves e o ce
 
 
 
-- Verificador:  
+- **Verificador:**  
   - [verify-app.py](./E01/verify-app.py):  
 
     `verify-app.py -cert <certificado do assinante> -msg <mensagem original a assinar> -sDash <Signature> -f <ficheiro do requerente>`  
