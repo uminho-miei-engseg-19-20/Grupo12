@@ -295,5 +295,11 @@ AIRBUS: Software: Cisco IOS/PIX sshd
         
 ACCOR: Software: OpenSSH
        Versão: 7.2+
+       
+#### 3/4/5. Vulnerabilidades presentes nas versões de software
+A versão de software que possui mais vulnerabilidades é a OpenSSH 7.2. Esta versão também possui a vulnerabilidade mais grave já que não foi encontrada grande informação acerca da versão de software Cisco IOS/PIX sshd 1.25.
+A vulnerabilidade encontrada foi a CVE-2016-6515 que consiste numa falha na função de autenticação de password que não limita o tamanho desta e permite aos atacantes causarem um denial of service. Esta vulnerabilidade está classificada com 7.5, ou seja, está avaliada como HIGH e sendo assim é considerada grave.
+
+
 
 
