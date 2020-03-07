@@ -118,7 +118,8 @@ Esta vulnerabilidade apenas afeta cifras TLS que usem a encriptação RSA, poré
 Nesta pergunta pretende-se utilizar o ssh-audit para efetuar testes aos sites fornecidos. As empresas escolhidas para a realização destes testes foram a AIRBUS e a ........... .
 #### 1 -> Resultados do ssh-audit
 
-- **AIRBUS:**  
+- **AIRBUS:**
+```
 # general
 (gen) banner: SSH-2.0-Cisco-1.25
 (gen) software: Cisco IOS/PIX sshd 1.25
@@ -177,5 +178,6 @@ Nesta pergunta pretende-se utilizar o ssh-audit para efetuar testes aos sites fo
 (rec) -3des-cbc                           -- enc algorithm to remove 
 (rec) -aes256-cbc                         -- enc algorithm to remove 
 (rec) -hmac-sha1-96                       -- mac algorithm to remove 
+```
 
 
