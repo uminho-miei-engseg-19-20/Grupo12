@@ -8,7 +8,7 @@
 #       function (see eccblind.py)
 #
 # Copyright (c) 2016 Universidade do Minho
-# Developed by André Baptista - Devise Futures, Lda. (andre.baptista@devisefutures.com)
+# Developed by AndrÃ© Baptista - Devise Futures, Lda. (andre.baptista@devisefutures.com)
 # Reviewed by Ricardo Barroso - Devise Futures, Lda. (ricardo.barroso@devisefutures.com)
 #
 #
@@ -43,7 +43,7 @@ def printUsage():
 
 
 def parseArgs():
-    if len(sys.argv) != 5:
+    if len(sys.argv) != 5 or sys.argv[1] != '-key' or sys.argv[-2] != '-bmsg':
         printUsage()
     else:
         eccPrivateKeyPath = sys.argv[2]
@@ -68,7 +68,7 @@ def main(eccPrivateKeyPath, blindM):
         with open('signerFile.txt', 'r') as f:
             file = f.read()
     except FileNotFoundError:
-        print('Ficheiro signerFile.txt n�o encontrado!')
+        print('Ficheiro signerFile.txt não encontrado!')
 
     initComponents = file[16: file.find('\n')]
     pemKey = utils.readFile(eccPrivateKeyPath)
