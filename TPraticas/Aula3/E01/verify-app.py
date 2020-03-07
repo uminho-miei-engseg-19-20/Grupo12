@@ -43,7 +43,7 @@ def printUsage():
 
 
 def parseArgs():
-    if len(sys.argv) < 9:
+    if len(sys.argv) < 9 or sys.argv[1] != '-cert' or sys.argv[-2] != '-f' or sys.argv[-4] != '-sDash':
         printUsage()
     else:
         eccPublicKeyPath = sys.argv[2]
