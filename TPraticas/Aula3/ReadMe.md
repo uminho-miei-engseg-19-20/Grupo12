@@ -91,7 +91,6 @@ Signature: f77d59b073fa62020e9c80bb7461b8ad12a646ace368510c18ddeb68f4afcd78
 $python verify-app.py -cert key.crt -msg mensagem a ser assinada -sDash f77d59b073fa62020e9c80bb7461b8ad12a646ace368510c18ddeb68f4afcd78 -f requesterFile.txt
 Output
 Valid signature
-
 ```
 
 # Exercício 2 - Protocolo SSL/TLS
