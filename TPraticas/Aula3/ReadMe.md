@@ -51,11 +51,11 @@ Para a realização da pergunta 1.1, foi primeiro gerados o par de chaves e o ce
 Exemplo de utilização:
 
 - **Inicialização:**  
-'''
+```
 $python init-app.py -init
 pRDashComponents: 4e5e1dc1104377013d6135edfe14079911f598f2ac38cb35073ddd624ecd076a.7dad36047a378d800435a0eb4b0123100539698f095684724918275c921b837b
 initComponents and pRDashComponents initiated and stored in signerFile.txt.
-'''
+```
 
 - **Ofuscação:**  
 
