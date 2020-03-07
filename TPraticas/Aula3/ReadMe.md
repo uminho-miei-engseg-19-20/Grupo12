@@ -59,11 +59,40 @@ initComponents and pRDashComponents initiated and stored in signerFile.txt.
 
 - **Ofuscação:**  
 
+```
+$python ofusca-app.py -msg mensagem a ser assinada -RDash 4e5e1dc1104377013d6135edfe14079911f598f2ac38cb35073ddd624ecd076a.7dad36047a378d800435a0eb4b0123100539698f095684724918275c921b837b
+Output
+Blind message: 46156123a69a9ed9a1f26568fda50b32015a54ef7b604c7731045e11d59536f7
+Blind components and pRComponents stored in requesterFile.txt.
+```
+
 - **Assinatura:**  
+
+```
+$python blindSignature-app.py -key key.pem -bmsg 46156123a69a9ed9a1f26568fda50b32015a54ef7b604c7731045e11d59536f7
+Input
+Passphrase: 
+Output
+Blind signature: 944f061ba0a200e525af5a5ceeb8bc841b884a9c1c0b6ceebafcedef4e478ee1146083be9ac7b69fb662d58de839064498f28bfb3b45840f0c37a599fc98d01
+```
 
 - **desofuscação:**  
 
+```
+$python desofusca-app.py -s 944f061ba0a200e525af5a5ceeb8bc841b884a9c1c0b6ceebafcedef4e478ee1146083be9ac7b69fb662d58de839064498f28bfb3b45840f0c37a599fc98d01 -RDash 4e5e1dc1104377013d6135edfe14079911f598f2ac38cb35073ddd624ecd076a.7dad36047a378d800435a0eb4b0123100539698f095684724918275c921b837b
+Output
+Signature: f77d59b073fa62020e9c80bb7461b8ad12a646ace368510c18ddeb68f4afcd78
+
+```
+
 - **Verificação:**  
+
+```
+$python verify-app.py -cert key.crt -msg mensagem a ser assinada -sDash f77d59b073fa62020e9c80bb7461b8ad12a646ace368510c18ddeb68f4afcd78 -f requesterFile.txt
+Output
+Valid signature
+
+```
 
 # Exercício 2 - Protocolo SSL/TLS
 ## Pergunta 2.1
