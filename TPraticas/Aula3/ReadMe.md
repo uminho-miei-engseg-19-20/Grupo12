@@ -116,7 +116,8 @@ Esta vulnerabilidade apenas afeta cifras TLS que usem a encriptação RSA, poré
 # Exercício 3 - Protocolo SSH
 ## Pergunta P3.1
 Nesta pergunta pretende-se utilizar o ssh-audit para efetuar testes aos sites fornecidos. As empresas escolhidas para a realização destes testes foram a AIRBUS e a ........... .
-#### 1 -> Resultados do ssh-audit
+#### 1. Resultados do ssh-audit
+
 
 - **AIRBUS:**
 ```
@@ -178,6 +179,121 @@ Nesta pergunta pretende-se utilizar o ssh-audit para efetuar testes aos sites fo
 (rec) -3des-cbc                           -- enc algorithm to remove 
 (rec) -aes256-cbc                         -- enc algorithm to remove 
 (rec) -hmac-sha1-96                       -- mac algorithm to remove 
+
+
+
 ```
+
+- **ACCOR:**
+```
+# general
+(gen) banner: SSH-2.0-lancom
+(gen) compatibility: OpenSSH 7.2+ (some functionality from 6.6), Dropbear SSH 2013.62+ (some functionality from 0.52)
+(gen) compression: enabled (zlib)
+
+# key exchange algorithms
+(kex) diffie-hellman-group14-sha1           -- [warn] using weak hashing algorithm
+                                            `- [info] available since OpenSSH 3.9, Dropbear SSH 0.53
+(kex) diffie-hellman-group1-sha1            -- [fail] removed (in server) since OpenSSH 6.7, unsafe algorithm
+                                            `- [fail] disabled (in client) since OpenSSH 7.0, logjam attack
+                                            `- [warn] using small 1024-bit modulus
+                                            `- [warn] using weak hashing algorithm
+                                            `- [info] available since OpenSSH 2.3.0, Dropbear SSH 0.28
+(kex) diffie-hellman-group-exchange-sha1    -- [fail] removed (in server) since OpenSSH 6.7, unsafe algorithm
+                                            `- [warn] using weak hashing algorithm
+                                            `- [info] available since OpenSSH 2.3.0
+(kex) diffie-hellman-group-exchange-sha256  -- [warn] using custom size modulus (possibly weak)
+                                            `- [info] available since OpenSSH 4.4
+(kex) ecdh-sha2-nistp256                    -- [fail] using weak elliptic curves
+                                            `- [info] available since OpenSSH 5.7, Dropbear SSH 2013.62
+(kex) ecdh-sha2-nistp384                    -- [fail] using weak elliptic curves
+                                            `- [info] available since OpenSSH 5.7, Dropbear SSH 2013.62
+(kex) ecdh-sha2-nistp521                    -- [fail] using weak elliptic curves
+                                            `- [info] available since OpenSSH 5.7, Dropbear SSH 2013.62
+(kex) curve25519-sha256@libssh.org          -- [info] available since OpenSSH 6.5, Dropbear SSH 2013.62
+(kex) ext-info-s                            -- [warn] unknown algorithm
+
+# host-key algorithms
+(key) ecdsa-sha2-nistp256                   -- [fail] using weak elliptic curves
+                                            `- [warn] using weak random number generator could reveal the key
+                                            `- [info] available since OpenSSH 5.7, Dropbear SSH 2013.62
+(key) ssh-dss                               -- [fail] removed (in server) and disabled (in client) since OpenSSH 7.0, weak algorithm
+                                            `- [warn] using small 1024-bit modulus
+                                            `- [warn] using weak random number generator could reveal the key
+                                            `- [info] available since OpenSSH 2.1.0, Dropbear SSH 0.28
+(key) rsa-sha2-512                          -- [info] available since OpenSSH 7.2
+(key) rsa-sha2-256                          -- [info] available since OpenSSH 7.2
+(key) ssh-rsa                               -- [info] available since OpenSSH 2.5.0, Dropbear SSH 0.28
+
+# encryption algorithms (ciphers)
+(enc) aes256-gcm@openssh.com                -- [info] available since OpenSSH 6.2
+(enc) aes128-gcm@openssh.com                -- [info] available since OpenSSH 6.2
+(enc) chacha20-poly1305@openssh.com         -- [info] available since OpenSSH 6.5
+                                            `- [info] default cipher since OpenSSH 6.9.
+(enc) aes256-ctr                            -- [info] available since OpenSSH 3.7, Dropbear SSH 0.52
+(enc) aes192-ctr                            -- [info] available since OpenSSH 3.7
+(enc) aes128-ctr                            -- [info] available since OpenSSH 3.7, Dropbear SSH 0.52
+(enc) aes256-cbc                            -- [fail] removed (in server) since OpenSSH 6.7, unsafe algorithm
+                                            `- [warn] using weak cipher mode
+                                            `- [info] available since OpenSSH 2.3.0, Dropbear SSH 0.47
+(enc) aes192-cbc                            -- [fail] removed (in server) since OpenSSH 6.7, unsafe algorithm
+                                            `- [warn] using weak cipher mode
+                                            `- [info] available since OpenSSH 2.3.0
+(enc) aes128-cbc                            -- [fail] removed (in server) since OpenSSH 6.7, unsafe algorithm
+                                            `- [warn] using weak cipher mode
+                                            `- [info] available since OpenSSH 2.3.0, Dropbear SSH 0.28
+(enc) blowfish-ctr                          -- [warn] unknown algorithm
+(enc) blowfish-cbc                          -- [fail] removed (in server) since OpenSSH 6.7, unsafe algorithm
+                                            `- [fail] disabled since Dropbear SSH 0.53
+                                            `- [warn] disabled (in client) since OpenSSH 7.2, legacy algorithm
+                                            `- [warn] using weak cipher mode
+                                            `- [warn] using small 64-bit block size
+                                            `- [info] available since OpenSSH 1.2.2, Dropbear SSH 0.28
+(enc) 3des-ctr                              -- [info] available since Dropbear SSH 0.52
+(enc) 3des-cbc                              -- [fail] removed (in server) since OpenSSH 6.7, unsafe algorithm
+                                            `- [warn] using weak cipher
+                                            `- [warn] using weak cipher mode
+                                            `- [warn] using small 64-bit block size
+                                            `- [info] available since OpenSSH 1.2.2, Dropbear SSH 0.28
+
+# message authentication code algorithms
+(mac) hmac-sha2-512                         -- [warn] using encrypt-and-MAC mode
+                                            `- [info] available since OpenSSH 5.9, Dropbear SSH 2013.56
+(mac) hmac-sha2-256                         -- [warn] using encrypt-and-MAC mode
+                                            `- [info] available since OpenSSH 5.9, Dropbear SSH 2013.56
+(mac) hmac-sha1                             -- [warn] using encrypt-and-MAC mode
+                                            `- [warn] using weak hashing algorithm
+                                            `- [info] available since OpenSSH 2.1.0, Dropbear SSH 0.28
+
+# algorithm recommendations (for OpenSSH 7.2)
+(rec) -diffie-hellman-group14-sha1          -- kex algorithm to remove 
+(rec) -diffie-hellman-group-exchange-sha1   -- kex algorithm to remove 
+(rec) -diffie-hellman-group1-sha1           -- kex algorithm to remove 
+(rec) -ecdh-sha2-nistp256                   -- kex algorithm to remove 
+(rec) -ecdh-sha2-nistp521                   -- kex algorithm to remove 
+(rec) -ecdh-sha2-nistp384                   -- kex algorithm to remove 
+(rec) -ecdsa-sha2-nistp256                  -- key algorithm to remove 
+(rec) -ssh-dss                              -- key algorithm to remove 
+(rec) +ssh-ed25519                          -- key algorithm to append 
+(rec) -aes192-cbc                           -- enc algorithm to remove 
+(rec) -aes128-cbc                           -- enc algorithm to remove 
+(rec) -blowfish-cbc                         -- enc algorithm to remove 
+(rec) -3des-cbc                             -- enc algorithm to remove 
+(rec) -aes256-cbc                           -- enc algorithm to remove 
+(rec) -hmac-sha2-512                        -- mac algorithm to remove 
+(rec) -hmac-sha1                            -- mac algorithm to remove 
+(rec) -hmac-sha2-256                        -- mac algorithm to remove 
+(rec) +hmac-sha2-256-etm@openssh.com        -- mac algorithm to append 
+(rec) +hmac-sha2-512-etm@openssh.com        -- mac algorithm to append 
+(rec) +umac-128-etm@openssh.com             -- mac algorithm to append 
+
+
+```
+#### 2. Software e versão utilizada pelos servidores ssh
+AIRBUS: Software: Cisco IOS/PIX sshd
+        Versão: 1.25
+        
+ACCOR: Software: OpenSSH
+       Versão: 7.2+
 
 
