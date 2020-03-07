@@ -41,7 +41,7 @@ def printUsage():
 
 
 def parseArgs():
-    if len(sys.argv) != 5:
+    if len(sys.argv) != 5 or sys.argv[1] != '-s' or sys.argv[-2] != '-RDash':
         printUsage()
     else:
         blind_signature = sys.argv[2]
