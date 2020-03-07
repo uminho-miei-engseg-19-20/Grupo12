@@ -116,7 +116,9 @@ Esta vulnerabilidade apenas afeta cifras TLS que usem a encriptação RSA, poré
 # Exercício 3 - Protocolo SSH
 ## Pergunta P3.1
 Nesta pergunta pretende-se utilizar o ssh-audit para efetuar testes aos sites fornecidos. As empresas escolhidas para a realização destes testes foram a AIRBUS e a ........... .
-#### 1 -> Resultados do ssh-audit da empresa AIRBUS
+#### 1 -> Resultados do ssh-audit
+
+- **AIRBUS:**  
 # general
 (gen) banner: SSH-2.0-Cisco-1.25
 (gen) software: Cisco IOS/PIX sshd 1.25
