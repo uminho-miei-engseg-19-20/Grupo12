@@ -6,5 +6,6 @@ Não é possível garantir que o utilizador conseguirá um IP localizado nos EUA
 
 O site The Hidden Wiki (http://zqktlwi4fecvo6ri.onion/wiki/index.php/Main_Page) foi escolhido para verificar o circuito estabelecido.  
 
+A imagem abaixo mostra que o circuito vai da OP para um OR localizado na Alemanha, passando por outro OR no Canadá e em seguida passa por um OR na França. Logo após, o circuito passa por 3 saltos *relays* até chegar ao site pretendido.
 
 ![The Hidden Wiki](./img/the_hidden_wiki.png)
