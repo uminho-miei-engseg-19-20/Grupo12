@@ -9,3 +9,7 @@ Não é possível garantir que o utilizador conseguirá um IP localizado nos EUA
 A imagem abaixo mostra que o circuito vai da OP para um OR localizado na Alemanha, passando por outro OR no Canadá e em seguida passa por um OR na França. Logo após, o circuito passa por 3 saltos *relays* até chegar ao site pretendido.
 
 ![The Hidden Wiki](./img/the_hidden_wiki.png)
+
+
+**2 -** O protocolo TOR permite a existência de serviços anónimos, onde os intervenientes desconhecem o IP um do outro. Assim, são realizados 6 saltos para possibilitar a comunicação e garantir o anonimato de ambos. Os primeiros três são conhecidos pois representam o circuito criado pelo utilizador e os ultimos três são denominados de Relays pois representam o circuito criado pelo servidor. Os saltos são fundamentais para permitir o anonimato do cliente perante o servidor, permitindo assim a sua proteção.
+
