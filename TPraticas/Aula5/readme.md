@@ -75,7 +75,7 @@ Notou-se que quanto maior a dificuldade, maior o tempo necessário para minerar 
 
 **Pergunta 2.2**
 
-**1)**  
+**1)**
 O algoritmo de proof of word utilizado foi implementado na função `proof_of_work(last_proof)`. Este algoritmo simplesmente incrementa um número até que este seja divisível por 9 e seja divisível pelo *proof number* do bloco anterior, que é passado como o parâmetro `last_proof`.
 
 
