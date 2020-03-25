@@ -5,7 +5,7 @@ As oito estratégias de *privacy design* foram separada em duas categorias: **Es
 
 
 **Estratégias Orientadas ao dado:**  
-
+\\
 **Minimise:**  
 Considerada a estratégia de design de privacidade mais básica, *Minimise* estabelece que a quantidade de dados pessoais processados deve ser a mínima possível. Ao aplicar esta estratégia, assegura-se que os dados pessoais processados são realmente necessários e se não há uma alternativa menos invasiva de se alcançar os mesmos resultados. Os padrões de design comuns que são implementados à esta estratégia são *"select before you collect"* e *"anonymisation and use pseudonyms"*.  
 
