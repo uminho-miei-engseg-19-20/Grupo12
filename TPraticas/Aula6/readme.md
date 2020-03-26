@@ -34,4 +34,14 @@ A estratégia *enforce* afirma que deve existir uma política de privacidade com
 
 
 **Demonstrate:**  
-A última estratégia, *demostrate*, define que um controlador de dados deve seja capaz de demonstrar conformidade com as políticas de privacidade e com todos os requisitos legais aplicáveis. Esta estratégia é um passo a frente da *enforce*, já que requer que o controlador prove que realmente está no comando. O controlador deve também ser capaz de demonstrar como a política de privacidade é implementada dentro do sistema e em caso de problemas, ele deverá ser capaz de determinar a extensão de possíveis violações da privacidade. Exemplos de padrões de design que implementam esta estratégia são *privacy managemant systems* e o uso de auditoria e *logging*.
+A última estratégia, *demostrate*, define que um controlador de dados deve seja capaz de demonstrar conformidade com as políticas de privacidade e com todos os requisitos legais aplicáveis. Esta estratégia é um passo a frente da *enforce*, já que requer que o controlador prove que realmente está no comando. O controlador deve também ser capaz de demonstrar como a política de privacidade é implementada dentro do sistema e em caso de problemas, ele deverá ser capaz de determinar a extensão de possíveis violações da privacidade. Exemplos de padrões de design que implementam esta estratégia são *privacy managemant systems* e o uso de auditoria e *logging*.  
+
+**Pergunta 2.1**  
+
+**Suppliers of services and goods**
+
+Este caso de uso descreve a aquisição de produtos e serviços necessários para a operação diária e para venda de mercadorias de uma PME de varejo que oferece produtos por meio de uma loja virtual. Esses procedimentos podem incluir, em certos casos, o processamento de dados pessoais, como por exemplo, informações de contato de funcionários das empresas fornecedoras e informações financeiras de pessoas que têm contrato direto com a PME. A operação de processamento desses dados tem suporte de um sistema de TI conectado ao sistema ERP (*Enterprise Resource Planning*) e ao sistema de contabilidade.
+
+Dentro dos dados pessoais processados estão os nomes das empresas e detalhes de contato, informações financeiras como número de conta bancária e número de identificação fiscal, além de fotos e credeniais de acesso dos funcionários. Os pagamentos são realizados através de uso de serviços bancários remotos, os *invoices* e faturas de entregas são carregados em lotes durante a noite através de uma plataforma offline e as comunicações administrativas com os fornecedores são feitas por meio de serviço de email comum.
+
+
