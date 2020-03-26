@@ -1,4 +1,4 @@
-##Pergunta 1.1## 
+## Pergunta 1.1 ##   
 (*Privacy and Data Protection by Design – from policy to engineering*)  
 
 As oito estratégias de *privacy design* foram separada em duas categorias: **Estratégias Orientadas aos dados** e **Estratégias Orientadas aos processos**.  
