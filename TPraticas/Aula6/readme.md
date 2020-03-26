@@ -34,7 +34,7 @@ A estratégia *enforce* afirma que deve existir uma política de privacidade com
 A última estratégia, *demostrate*, define que um controlador de dados deve seja capaz de demonstrar conformidade com as políticas de privacidade e com todos os requisitos legais aplicáveis. Esta estratégia é um passo a frente da *enforce*, já que requer que o controlador prove que realmente está no comando. O controlador deve também ser capaz de demonstrar como a política de privacidade é implementada dentro do sistema e em caso de problemas, ele deverá ser capaz de determinar a extensão de possíveis violações da privacidade. Exemplos de padrões de design que implementam esta estratégia são *privacy managemant systems* e o uso de auditoria e *logging*.  
 &nbsp;
 
-## Pergunta 2.1 ##  
+## Pergunta 1.2 ##  
 
 **Suppliers of services and goods**  
 
