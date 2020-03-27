@@ -42,4 +42,14 @@ Este caso de uso descreve a aquisição de produtos e serviços necessários par
 
 Dentro dos dados pessoais processados estão os nomes das empresas e detalhes de contato, informações financeiras como número de conta bancária e número de identificação fiscal, além de fotos e credeniais de acesso dos funcionários. Os pagamentos são realizados através de uso de serviços bancários remotos, os *invoices* e faturas de entregas são carregados em lotes durante a noite através de uma plataforma offline e as comunicações administrativas com os fornecedores são feitas por meio de serviço de email comum.  
 
+Tal como concluído na avaliação de risco, o probabilidae geral de acontecer algum caso de risco, é baixo, com isto as medidas de mitigação propostas, são baseadas no anexo A.1 do documento, das quais são:
+
+* Documentar todos os cargos da organização e o nivel de acesso destes na infrastutura.
+* Documentar os niveis de acesso de terceiros aos dados.
+* Em caso de alteração dos niveis de acesso de um dado cargo, esta mudança deve ser igualmente documentada.
+* Ter uma politica de acesso a dados restrita, e apenas permitir cargos com maior responsabilidade maior liberdade de acesso.
+* Ter garantias de segurança, em termos de infrastrutura, não são em termos de estrutura de rede e de sitemas, mas também cada utilizador deve ter a sua conta pessoal, e utilizar uma palavra-chave forte.
+* Ter documentado um plano de ação em caso de possíveis incidentes.
+* Ter documentado um plano de reestruturação no caso de incidentes.
+
 
