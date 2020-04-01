@@ -36,6 +36,7 @@ Uma vez que o script malicioso é injetado, o atacante pode realizar várias ati
 **1.3. Improper Input Validation**  
 Quando o software não realiza a validação do *input* apropriadamente, um atacate pode criar um *input* malicioso de uma forma não esperada pelo resto da aplicação, resultando em um fluxo de controle alterado, controle arbitrário de algum recurso ou até mesmo a execução de algum código malicioso.
 &nbsp
+&nbsp
 
 **2.**  
 **Incorrect Permission Assignment for Critical Resource**  
