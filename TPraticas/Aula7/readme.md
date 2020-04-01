@@ -1,11 +1,11 @@
 ## Pergunta 1.1 ##
 
 **1.**  
-1.1 **Improper Restriction of Operations within the Bounds of a Memory Buffer**  
+**1.1. Improper Restriction of Operations within the Bounds of a Memory Buffer**  
 
 Essa classe de vulnerabilidade se aproveita do fato de algumas linguagens permitirem o endereçamento direto dos locais da memória e não garantirem automaticamente que esses locais sejam válidos para o buffer de memória que está sendo referenciado, podendo isto possibilitar que operações de leitura ou gravação sejam executadas em locais de memória que podem estar associados a outras variáveis, estruturas de dados ou dados internos do programa. Como resultado, um atacante poderá ser capaz de executar cógidos arbitrários, alterar o controle de fluxo, ter acesso à informações sensíveis ou causar a falha do sistema.
 
-1.2 **Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')**  
+**1.2. Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')**  
 Essa classe de vulnerabilidade, também conhecida como XSS, ocorre quando:
 
 1. Dados não confiáveis são inseridos em uma aplicação web, tipicamente através de uma *web request*;
@@ -33,7 +33,7 @@ No *DOM-based XSS*, o cliente realiza uma injeção de XSS dentro da página, di
 Uma vez que o script malicioso é injetado, o atacante pode realizar várias atividades maliciosas como, transferir informações privadas ou enviar *requests* maliciosos para o site se passando pela vítima. O invasor pode também, realizar ataques de *Phishing* que seriam usados para emular websites confiáveis e induzir a vítima à digitar suas credenciais, permitindo que o atacante comprometa a conta da vítima no website em questão. Finalmente, o script pode explorar alguma vulnerabilidade do navegador e possivelmente tomar o controle do computador da vítima.  
 
 
-1.3 **Improper Input Validation**  
+**1.3. Improper Input Validation**  
 Quando o software não realiza a validação do *input* apropriadamente, um atacate pode criar um *input* malicioso de uma forma não esperada pelo resto da aplicação, resultando em um fluxo de controle alterado, controle arbitrário de algum recurso ou até mesmo a execução de algum código malicioso.
 
 **2.**  
