@@ -19,14 +19,14 @@ Essa classe de vulnerabilidade, também conhecida como XSS, ocorre quando:
 Segundo o site do CWE, existem três tipos principais de XSS:
 
 
-***Reflected XSS* (ou *Non-Persistent*):**  
+* ***Reflected XSS* (ou *Non-Persistent*):**  
 O servidor ler os dados diretamente do *request* HTTP e os reflete de volta em um *response* HTTP. Esse tipo de XSS ocorre quando um atacante induz a vítima a fornecer conteúdos maliciosos para uma aplicação Web vulnerável, que é refletido de volta à vítima e executado pelo navegador.
 
-***Stored XSS* (ou *Persistent*):**  
+* ***Stored XSS* (ou *Persistent*):**  
 A aplicação armazena dados maliciosos em base de dados, fóruns, log de visitantes ou em qualquer outra forma de armazenamento confiável do lado do servidor. Posteriormente, esses dados maliciosos são lidos de volta pela aplicação e incluídos no conteúdo dinâmico.
 
 
-***DOM-Based XSS*:**  
+* ***DOM-Based XSS*:**  
 No *DOM-based XSS*, o cliente realiza uma injeção de XSS dentro da página, diferentemente dos outros tipos de XSS onde o servidor realiza a injeção. 
 
 
@@ -39,4 +39,8 @@ Quando o software não realiza a validação do *input* apropriadamente, um atac
 **2.**  
 **Incorrect Permission Assignment for Critical Resource**  
 
-Essa classe de vulnerabilidade ocorre quando um recurso recebe uma configuração de permissões que fornece acesso à uma gama de atores maior que o necessário, podendo levar à uma exposição de informações sensíveis ou à modificação desse recurso por partes não autorizadas. Isso é especialmente perigoso quando o recurso está relacionado à configurações do programa, execução ou à dados pessoais confidenciais.
+Essa classe de vulnerabilidade ocorre quando um recurso recebe uma configuração de permissões que fornece acesso à uma gama de atores maior que o necessário, podendo levar à uma exposição de informações sensíveis ou à modificação desse recurso por partes não autorizadas. Isso é especialmente perigoso quando o recurso está relacionado à configurações do programa, execução ou à dados pessoais confidenciais.  
+
+## Pergunta 1.2 ##  
+## Pergunta 1.3 ##  
+## Pergunta 1.4 ##  
