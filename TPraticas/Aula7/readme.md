@@ -47,4 +47,6 @@ Essa classe de vulnerabilidade ocorre quando um recurso recebe uma configuraçã
 O limite superior de bugs que se pode encontrar por 1000 linhas de código é 50 e o limite inferior é 5.
 Assim, no facebook o número máximo de bugs que podemos encontrar é de 3100000 e o mínimo será 310000. Quanto ao software de automóveis o limite superior de bugs será de 5000000 e o limite inferior de 500000. No Linux 3.1 o número de bugs máximo é de 750000 e o mínimo de 75000. Por fim, nos serviços de internet da Google o limite superior de bugs esperado é de 100000000 e o inferior de 10000000. (A fazer o numero de vulnerabilidades)
 ## Pergunta 1.3 ##  
-## Pergunta 1.4 ##  
+## Pergunta 1.4 ##
+A diferença entre uma vulnerabilidade de dia-0 e outra vulnerabilidade de codificação é que as de dia-0 apenas são conhecidas por um grupo/meio restrito e não por toda a comunidade de segurança informática (equipas competentes e com bons conhecimentos de segurança). Até que esta vulnerabilidade seja do conhecimento da comunidade de segurança informática, os atacantes podem explorá-la afetando, por exemplo, o programa, os dados ou uma rede. Este tipo de ataques é denominado de ataques dia-zero. 
+
