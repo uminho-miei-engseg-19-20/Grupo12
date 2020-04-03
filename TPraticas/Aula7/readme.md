@@ -60,6 +60,8 @@ Essa classe de vulnerabilidades é aplicável independentemente de linguagens e 
 
 Um atacante pode ser capaz de ler informações sensíveis como credenciais ou informações de configuração armazenadas em um ficheiro e comprometer a **Confidencialidade** do sistema. Através dessa *weakness*, um atacante também pode modificar propriedades críticas para ganhar privilégios e comprometer o **controlo de acesso** do sistema. Além disso, um invasor pode ser capaz de destruir ou corromper dados sensíveis, apagar registos de uma base de dados, comprometendo a **Integridade** do sistema.  
 
+A vulnerabilidade **CVE-2020-8768** é a CVE mais recente da classe **CWE-732** e foi encontrada em alguns controladores da empresa Phoenix Contact. Nesses dispositivos vulneráveis existe um mecanismo inseguro para acesso de leitura e gravação à configuração do controlador. Esse mecanismo pode ser descoberto examinando um link no website do dispositivo. Essa vulnerabilidade, segundo a base de dados do NIST, é considerada crítica, não requer privilégios, pode ser explorada remotamente e não necessita de intereção do usuário para ser explorada. Além disso, ao ser explorada, essa falha compromete completamente a **Integridade** e a **Disponibilidade** do sistema.  
+
 
 ## Pergunta 1.2 ##  
 O limite superior de bugs que se pode encontrar por 1000 linhas de código é 50 e o limite inferior é 5.
