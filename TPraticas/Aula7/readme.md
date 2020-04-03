@@ -5,6 +5,8 @@
 
 Essa classe de vulnerabilidade se aproveita do fato de algumas linguagens permitirem o endereçamento direto dos locais da memória e não garantirem automaticamente que esses locais sejam válidos para o buffer de memória que está sendo referenciado, podendo isto possibilitar que operações de leitura ou gravação sejam executadas em locais de memória que podem estar associados a outras variáveis, estruturas de dados ou dados internos do programa. Como resultado, um atacante poderá ser capaz de executar cógidos arbitrários, alterar o controle de fluxo, ter acesso à informações sensíveis ou causar a falha do sistema.
 
+Por permitir o endereçamento direto de memória, as linguagens C e C++ são as mais afetadas por essa *Weakness*.  
+
 **1.2. Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')**  
 Essa classe de vulnerabilidade, também conhecida como XSS, ocorre quando:
 
@@ -31,17 +33,20 @@ No *DOM-based XSS*, o cliente realiza uma injeção de XSS dentro da página, di
 
 
 Uma vez que o script malicioso é injetado, o atacante pode realizar várias atividades maliciosas como, transferir informações privadas ou enviar *requests* maliciosos para o site se passando pela vítima. O invasor pode também, realizar ataques de *Phishing* que seriam usados para emular websites confiáveis e induzir a vítima à digitar suas credenciais, permitindo que o atacante comprometa a conta da vítima no website em questão. Finalmente, o script pode explorar alguma vulnerabilidade do navegador e possivelmente tomar o controle do computador da vítima.  
-
+A prevalência dessa classe de vulnerabilidades independe de linguagens, mas é mais predominante em tecnologias *Web Based*.  
 
 **1.3. Improper Input Validation**  
 Quando o software não realiza a validação do *input* apropriadamente, um atacate pode criar um *input* malicioso de uma forma não esperada pelo resto da aplicação, resultando em um fluxo de controle alterado, controle arbitrário de algum recurso ou até mesmo a execução de algum código malicioso.
 &nbsp;
-
+A prevalência dessa classe de vulnerabilidades independe de linguagens.  
 
 **2.**  
 **Incorrect Permission Assignment for Critical Resource**  
 
 Essa classe de vulnerabilidade ocorre quando um recurso recebe uma configuração de permissões que fornece acesso à uma gama de atores maior que o necessário, podendo levar à uma exposição de informações sensíveis ou à modificação desse recurso por partes não autorizadas. Isso é especialmente perigoso quando o recurso está relacionado à configurações do programa, execução ou à dados pessoais confidenciais.  
+
+Essa classe de vulnerabilidades é aplicável independentemente de linguagens e tecnologias.  
+
 
 ## Pergunta 1.2 ##  
 O limite superior de bugs que se pode encontrar por 1000 linhas de código é 50 e o limite inferior é 5.
