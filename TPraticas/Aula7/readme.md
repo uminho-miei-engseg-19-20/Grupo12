@@ -7,6 +7,10 @@ Essa classe de vulnerabilidade se aproveita do fato de algumas linguagens permit
 
 Por permitir o endereçamento direto de memória, as linguagens C e C++ são as mais afetadas por essa *Weakness*.  
 
+Se o atacante conseguir executar códigos ou comandos não autorizados e modificar a memória, comprometeria a Integridade, Connfidencialidade e a Disponibilidade do sistema. Caso o atacante consiga ler a memória e causar um ataque DoS, comprometeria a Disponibilidade e a Confidencialidade do sistema
+e se caso o atacante tiver sucesso em ler a memória, ele poderia ter acesso à informações confidenciais, comprometendo a Confidencia do sistema.  
+
+
 **1.2. Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')**  
 Essa classe de vulnerabilidade, também conhecida como XSS, ocorre quando:
 
