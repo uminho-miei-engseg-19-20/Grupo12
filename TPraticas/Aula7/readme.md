@@ -1,17 +1,17 @@
 ## Pergunta 1.1 ##
 
 **1.**  
-**1.1. Improper Restriction of Operations within the Bounds of a Memory Buffer**  
+**1.1. CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer**  
 
 Essa classe de vulnerabilidade se aproveita do fato de algumas linguagens permitirem o endereçamento direto dos locais da memória e não garantirem automaticamente que esses locais sejam válidos para o buffer de memória que está sendo referenciado, podendo isto possibilitar que operações de leitura ou gravação sejam executadas em locais de memória que podem estar associados a outras variáveis, estruturas de dados ou dados internos do programa. Como resultado, um atacante poderá ser capaz de executar cógidos arbitrários, alterar o controle de fluxo, ter acesso à informações sensíveis ou causar a falha do sistema.
 
 Por permitir o endereçamento direto de memória, as linguagens **C** e **C++** são as mais afetadas por essa *Weakness*.  
 
-Se o atacante conseguir executar códigos ou comandos não autorizados e modificar a memória, comprometeria a **Integridade**, **Confidencialidade** e a **Disponibilidade** do sistema. Caso o atacante consiga ler a memória e causar um ataque DoS, comprometeria a **Disponibilidade** e a **Confidencialidade** do sistema
+Se o atacante conseguir executar códigos ou comandos não autorizados, causar um *buffer overflow* e modificar a memória, comprometeria a **Integridade**, **Confidencialidade** e a **Disponibilidade** do sistema. Caso o atacante consiga ler a memória e causar um ataque DoS, comprometeria a **Disponibilidade** e a **Confidencialidade** do sistema
 e se caso o atacante tiver sucesso em ler a memória, ele poderia ter acesso à informações sensíveis, comprometendo a **Confidencialidade** do sistema.  
 
 
-**1.2. Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')**  
+**1.2. CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')**  
 
 Essa classe de vulnerabilidade, também conhecida como XSS, ocorre quando:
 
@@ -43,13 +43,16 @@ A prevalência dessa classe de vulnerabilidades independe de linguagens, mas é 
 
 Caso o atacante tenha sucesso em ultrapassar o mecanismo de proteção e ter acesso à dados de aplicação, esse ataque comprometeria o **controlo de acesso** e a **Confidencialidade** do sistema. Se o atacante conseguir executar códigos ou comandos não autorizados, comprometeria a **Integridade**, **Confidencialidade** e a **Disponibilidade** do sistema. Caso o atacante consiga além de executar códigos ou comandos, ultrapassar o mecanismo de proteção e ter acesso à dados de aplicação, comprometeria a **Confidencialidade**, a **Integridade**, a **Disponibilidade** e o **controlo de acesso** do sistema.  
 
-**1.3. Improper Input Validation**  
+**1.3. CWE-20: Improper Input Validation**  
 Quando o software não realiza a validação do *input* apropriadamente, um atacate pode criar um *input* malicioso de uma forma não esperada pelo resto da aplicação, resultando em um fluxo de controle alterado, controle arbitrário de algum recurso ou até mesmo a execução de algum código malicioso.
 &nbsp;
 A prevalência dessa classe de vulnerabilidades independe de linguagens.  
 
+Uma consequência comum dessa classe de vulnerabilidade é um ataque DoS, que comprometeria a **Disponibilidade** do sistema. Caso o atacante possa ler a memória e ficheiros ou directórios, a **Confidencialidade** do sistema seria afetada. Caso um atacante usasse um *input* malicioso para modificar dados ou alterar o fluxo de controle, ele comprometeria a **Integridade**, a **Confidencialidade** e a **Disponibilidade** do sistema.  
+
+
 **2.**  
-**Incorrect Permission Assignment for Critical Resource**  
+**CWE-732: Incorrect Permission Assignment for Critical Resource**  
 
 Essa classe de vulnerabilidade ocorre quando um recurso recebe uma configuração de permissões que fornece acesso à uma gama de atores maior que o necessário, podendo levar à uma exposição de informações sensíveis ou à modificação desse recurso por partes não autorizadas. Isso é especialmente perigoso quando o recurso está relacionado à configurações do programa, execução ou à dados pessoais confidenciais.  
 
