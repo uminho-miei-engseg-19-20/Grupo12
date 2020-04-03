@@ -58,6 +58,8 @@ Essa classe de vulnerabilidade ocorre quando um recurso recebe uma configuraçã
 
 Essa classe de vulnerabilidades é aplicável independentemente de linguagens e tecnologias.  
 
+Um atacante pode ser capaz de ler informações sensíveis como credenciais ou informações de configuração armazenadas em um ficheiro e comprometer a **Confidencialidade** do sistema. Através dessa *weakness*, um atacante também pode modificar propriedades críticas para ganhar privilégios e comprometer o **controlo de acesso** do sistema. Além disso, um invasor pode ser capaz de destruir ou corromper dados sensíveis, apagar registos de uma base de dados, comprometendo a **Integridade** do sistema.  
+
 
 ## Pergunta 1.2 ##  
 O limite superior de bugs que se pode encontrar por 1000 linhas de código é 50 e o limite inferior é 5.
