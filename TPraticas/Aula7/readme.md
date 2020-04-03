@@ -1,17 +1,17 @@
 ## Pergunta 1.1 ##
 
 **1.**  
-**1.1. CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer**  
+**1.1. Improper Restriction of Operations within the Bounds of a Memory Buffer**  
 
 Essa classe de vulnerabilidade se aproveita do fato de algumas linguagens permitirem o endereçamento direto dos locais da memória e não garantirem automaticamente que esses locais sejam válidos para o buffer de memória que está sendo referenciado, podendo isto possibilitar que operações de leitura ou gravação sejam executadas em locais de memória que podem estar associados a outras variáveis, estruturas de dados ou dados internos do programa. Como resultado, um atacante poderá ser capaz de executar cógidos arbitrários, alterar o controle de fluxo, ter acesso à informações sensíveis ou causar a falha do sistema.
 
 Por permitir o endereçamento direto de memória, as linguagens **C** e **C++** são as mais afetadas por essa *Weakness*.  
 
-Se o atacante conseguir executar códigos ou comandos não autorizados, causar um *buffer overflow* e modificar a memória, comprometeria a **Integridade**, **Confidencialidade** e a **Disponibilidade** do sistema. Caso o atacante consiga ler a memória e causar um ataque DoS, comprometeria a **Disponibilidade** e a **Confidencialidade** do sistema
+Se o atacante conseguir executar códigos ou comandos não autorizados e modificar a memória, comprometeria a **Integridade**, **Confidencialidade** e a **Disponibilidade** do sistema. Caso o atacante consiga ler a memória e causar um ataque DoS, comprometeria a **Disponibilidade** e a **Confidencialidade** do sistema
 e se caso o atacante tiver sucesso em ler a memória, ele poderia ter acesso à informações sensíveis, comprometendo a **Confidencialidade** do sistema.  
 
 
-**1.2. CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')**  
+**1.2. Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')**  
 
 Essa classe de vulnerabilidade, também conhecida como XSS, ocorre quando:
 
@@ -43,50 +43,38 @@ A prevalência dessa classe de vulnerabilidades independe de linguagens, mas é 
 
 Caso o atacante tenha sucesso em ultrapassar o mecanismo de proteção e ter acesso à dados de aplicação, esse ataque comprometeria o **controlo de acesso** e a **Confidencialidade** do sistema. Se o atacante conseguir executar códigos ou comandos não autorizados, comprometeria a **Integridade**, **Confidencialidade** e a **Disponibilidade** do sistema. Caso o atacante consiga além de executar códigos ou comandos, ultrapassar o mecanismo de proteção e ter acesso à dados de aplicação, comprometeria a **Confidencialidade**, a **Integridade**, a **Disponibilidade** e o **controlo de acesso** do sistema.  
 
-**1.3. CWE-20: Improper Input Validation**  
+**1.3. Improper Input Validation**  
 Quando o software não realiza a validação do *input* apropriadamente, um atacate pode criar um *input* malicioso de uma forma não esperada pelo resto da aplicação, resultando em um fluxo de controle alterado, controle arbitrário de algum recurso ou até mesmo a execução de algum código malicioso.
 &nbsp;
 A prevalência dessa classe de vulnerabilidades independe de linguagens.  
 
-Uma consequência comum dessa classe de vulnerabilidade é um ataque DoS, que comprometeria a **Disponibilidade** do sistema. Caso o atacante possa ler a memória e ficheiros ou directórios, a **Confidencialidade** do sistema seria afetada. Caso um atacante usasse um *input* malicioso para modificar dados ou alterar o fluxo de controle, ele comprometeria a **Integridade**, a **Confidencialidade** e a **Disponibilidade** do sistema.  
-
-
 **2.**  
-**CWE-732: Incorrect Permission Assignment for Critical Resource**  
+**Incorrect Permission Assignment for Critical Resource**  
 
 Essa classe de vulnerabilidade ocorre quando um recurso recebe uma configuração de permissões que fornece acesso à uma gama de atores maior que o necessário, podendo levar à uma exposição de informações sensíveis ou à modificação desse recurso por partes não autorizadas. Isso é especialmente perigoso quando o recurso está relacionado à configurações do programa, execução ou à dados pessoais confidenciais.  
 
 Essa classe de vulnerabilidades é aplicável independentemente de linguagens e tecnologias.  
-
-Um atacante pode ser capaz de ler informações sensíveis como credenciais ou informações de configuração armazenadas em um ficheiro e comprometer a **Confidencialidade** do sistema. Através dessa *weakness*, um atacante também pode modificar propriedades críticas para ganhar privilégios e comprometer o **controlo de acesso** do sistema. Além disso, um invasor pode ser capaz de destruir ou corromper dados sensíveis, apagar registos de uma base de dados, comprometendo a **Integridade** do sistema.  
-
-A vulnerabilidade **CVE-2020-8768** é a CVE mais recente da classe **CWE-732** e foi encontrada em alguns controladores da empresa Phoenix Contact. Nesses dispositivos vulneráveis existe um mecanismo inseguro para acesso de leitura e gravação à configuração do controlador. Esse mecanismo pode ser descoberto examinando um link no website do dispositivo. Essa vulnerabilidade, segundo a base de dados do NIST, é considerada crítica, não requer privilégios, pode ser explorada remotamente e não necessita de intereção do usuário para ser explorada. Além disso, ao ser explorada, essa falha compromete completamente a **Integridade** e a **Disponibilidade** do sistema.  
-
-O código abaixo, escrito em C, define o *umask* do processo como 0 antes de criar e escrever "Hello world" em um ficheiro.  
-
-```
-#define OUTFILE "hello.out"
-
-umask(0);
-FILE *out;
-/* Ignore CWE-59 (link following) for brevity */
-
-out = fopen(OUTFILE, "w");
-if (out) {
-fprintf(out, "hello world!\n");
-fclose(out);
-}
-```   
-
-Após executar este código em um sistema operativo UNIX, a execução do comando "ls -l" irá retornar a seguinte saída:  
-`-rw-rw-rw- 1 username 13 Nov 24 17:58 hello.out`  
-As permissões de acesso (rw-rw-rw-) indicam que o dono, o grupo do dono e outros utilizadores podem ler e escrever neste ficheiro.  
 
 
 ## Pergunta 1.2 ##  
 O limite superior de bugs que se pode encontrar por 1000 linhas de código é 50 e o limite inferior é 5.
 Assim, no facebook o número máximo de bugs que podemos encontrar é de 3100000 e o mínimo será 310000. Quanto ao software de automóveis o limite superior de bugs será de 5000000 e o limite inferior de 500000. No Linux 3.1 o número de bugs máximo é de 750000 e o mínimo de 75000. Por fim, nos serviços de internet da Google o limite superior de bugs esperado é de 100000000 e o inferior de 10000000. (A fazer o numero de vulnerabilidades)
 ## Pergunta 1.3 ##  
+#### Vulnerabilidades de Projecto ####
+**Exemplo 1: CWE-73: External Control of File Name or Path**: O software permite, que o input do utilizador, possa controlar ou influenciar ficheiros usados em operações do sistema ficheiros, isto permite que o atacante aceda ou modifique ficheiros dos sistema ou outros ficheiros crucais à aplicação.Este tipo de erro, ocorre quando duas situações se sucedem:
+1. Um atacante consegue especificar um caminho utilizado numa operação do sistema de ficheiros.
+2. Após o primeiro passo, o atacante ganha capacidades que antes não era permitidas.
+O progama pode permitir assim ao atacante alterar um ficheiro especifico, ou correr uma configuração controlada por este.
+Existem diferentes formas de mitigação, a menos aconselhalável, mas provavelmente a mais simples, se possível em certos cenários, o caminho utilizado ser estático e não dinâmico. Outra solução pode passar por correr este código numa ambiente controlado com restrições entre o processo e o sistema operativo, de forma a que não permita aceder a ficheiros fora do directório, outra estratégia passa por estratégias de validação de input, no qual o input só é aceite se corresponder determinadas regras, entre outras.
+**Exemplo 2: CWE-91: XML Injection (aka Blind XPath Injection)**: Isto acontece quando o software, não controla propriamente caracteres especiais que são usados em XML, isto permite que atacantes modifiquem a sintaxe, e o conteúdo do documento XML antes de este ser processado pelo sistema final, isto pode permitir ao atacante adicionar novos conteúdos ao xml ou modificar a syntax do xml. Medidas de mitigação passam por utilização de estratégias de validação de input no qual podem apenas é aceite inputs com determinadas regras impostas.
+#### Vulnerabilidades de Codificação ####
+**Exemplo 1: CWE-211: Externally-Generated Error Message Containing Sensitive Information**: A aplicação efetua uma operação que origina uma expção que causa uma mensagem de erro, ou um diagnóstico do sistema que não é diretamente controlado pela aplicação, o que pode levar à divulgação de informação sensível por parte do sistema. O atacante pode utilizar esta informação sensível por parte da aplicação para efetaur eventuais ataques. Esta vulnerabilidade pode ser mitigada de várias formas, o sistema onde esta foi implemetnada deve ser configuardo de forma a que prevenir que erros como este sejam gerados, o ambiente não deve permitir que mensagens deste tipo sejam demonstradas no produto final,  devem ser também usadas expções de forma a controlar eventuais erros como este.
+**Exemplo 2: CWE-112: Missing XML Validation**: O software aceita a utilização de xml de uma fonte não seguras, e não valida o esquema deste, isto permite a que atacantes possam utilizar codigo malicioso, sem este ser verificado. A medida de mitigação para este tipo de  situação é bastante simples, passa por validar sempre o esquema de XML seja através de XML Schema or DTD.
+#### Vulnerabilidade operacional ####
+
+
+
+
 ## Pergunta 1.4 ##
 A diferença entre uma vulnerabilidade de dia-0 e outra vulnerabilidade de codificação é que as de dia-0 apenas são conhecidas por um grupo/meio restrito e não por toda a comunidade de segurança informática (equipas competentes e com bons conhecimentos de segurança). Até que esta vulnerabilidade seja do conhecimento da comunidade de segurança informática, os atacantes podem explorá-la afetando, por exemplo, o programa, os dados ou uma rede. Este tipo de ataques é denominado de ataques dia-zero. 
 
