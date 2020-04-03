@@ -7,11 +7,12 @@ Essa classe de vulnerabilidade se aproveita do fato de algumas linguagens permit
 
 Por permitir o endereçamento direto de memória, as linguagens **C** e **C++** são as mais afetadas por essa *Weakness*.  
 
-Se o atacante conseguir executar códigos ou comandos não autorizados e modificar a memória, comprometeria a **Integridade**, **Connfidencialidade** e a **Disponibilidade** do sistema. Caso o atacante consiga ler a memória e causar um ataque DoS, comprometeria a **Disponibilidade** e a **Confidencialidade** do sistema
+Se o atacante conseguir executar códigos ou comandos não autorizados e modificar a memória, comprometeria a **Integridade**, **Confidencialidade** e a **Disponibilidade** do sistema. Caso o atacante consiga ler a memória e causar um ataque DoS, comprometeria a **Disponibilidade** e a **Confidencialidade** do sistema
 e se caso o atacante tiver sucesso em ler a memória, ele poderia ter acesso à informações sensíveis, comprometendo a **Confidencialidade** do sistema.  
 
 
 **1.2. Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')**  
+
 Essa classe de vulnerabilidade, também conhecida como XSS, ocorre quando:
 
 1. Dados não confiáveis são inseridos em uma aplicação web, tipicamente através de uma *web request*;
@@ -39,6 +40,8 @@ No *DOM-based XSS*, o cliente realiza uma injeção de XSS dentro da página, di
 Uma vez que o script malicioso é injetado, o atacante pode realizar várias atividades maliciosas como, transferir informações privadas ou enviar *requests* maliciosos para o site se passando pela vítima. O invasor pode também, realizar ataques de *Phishing* que seriam usados para emular websites confiáveis e induzir a vítima à digitar suas credenciais, permitindo que o atacante comprometa a conta da vítima no website em questão. Finalmente, o script pode explorar alguma vulnerabilidade do navegador e possivelmente tomar o controle do computador da vítima.  
 
 A prevalência dessa classe de vulnerabilidades independe de linguagens, mas é mais predominante em tecnologias *Web Based*.  
+
+Caso o atacante tenha sucesso em ultrapassar o mecanismo de proteção e ter acesso à dados de aplicação, esse ataque comprometeria o **controlo de acesso** e a **Confidencialidade** do sistema. Se o atacante conseguir executar códigos ou comandos não autorizados, comprometeria a **Integridade**, **Confidencialidade** e a **Disponibilidade** do sistema. Caso o atacante consiga além de executar códigos ou comandos, ultrapassar o mecanismo de proteção e ter acesso à dados de aplicação, comprometeria a **Confidencialidade**, a **Integridade**, a **Disponibilidade** e o **controlo de acesso** do sistema.  
 
 **1.3. Improper Input Validation**  
 Quando o software não realiza a validação do *input* apropriadamente, um atacate pode criar um *input* malicioso de uma forma não esperada pelo resto da aplicação, resultando em um fluxo de controle alterado, controle arbitrário de algum recurso ou até mesmo a execução de algum código malicioso.
