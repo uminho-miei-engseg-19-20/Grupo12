@@ -62,6 +62,26 @@ Um atacante pode ser capaz de ler informações sensíveis como credenciais ou i
 
 A vulnerabilidade **CVE-2020-8768** é a CVE mais recente da classe **CWE-732** e foi encontrada em alguns controladores da empresa Phoenix Contact. Nesses dispositivos vulneráveis existe um mecanismo inseguro para acesso de leitura e gravação à configuração do controlador. Esse mecanismo pode ser descoberto examinando um link no website do dispositivo. Essa vulnerabilidade, segundo a base de dados do NIST, é considerada crítica, não requer privilégios, pode ser explorada remotamente e não necessita de intereção do usuário para ser explorada. Além disso, ao ser explorada, essa falha compromete completamente a **Integridade** e a **Disponibilidade** do sistema.  
 
+O código abaixo, escrito em C, define o *umask* do processo como 0 antes de criar e escrever "Hello world" em um ficheiro.  
+
+```
+#define OUTFILE "hello.out"
+
+umask(0);
+FILE *out;
+/* Ignore CWE-59 (link following) for brevity */
+
+out = fopen(OUTFILE, "w");
+if (out) {
+fprintf(out, "hello world!\n");
+fclose(out);
+}
+```   
+
+Após executar este código em um sistema operativo UNIX, a execução do comando "ls -l" irá retornar a seguinte saída:  
+`-rw-rw-rw- 1 username 13 Nov 24 17:58 hello.out`  
+As permissões de acesso (rw-rw-rw-) indicam que o dono, o grupo do dono e outros utilizadores podem ler e escrever neste ficheiro.  
+
 
 ## Pergunta 1.2 ##  
 O limite superior de bugs que se pode encontrar por 1000 linhas de código é 50 e o limite inferior é 5.
