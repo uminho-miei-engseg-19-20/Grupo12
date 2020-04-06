@@ -58,7 +58,9 @@ Essa classe de vulnerabilidades é aplicável independentemente de linguagens e 
 
 ## Pergunta 1.2 ##  
 O limite superior de bugs que se pode encontrar por 1000 linhas de código é 50 e o limite inferior é 5.
-Assim, no facebook o número máximo de bugs que podemos encontrar é de 3100000 e o mínimo será 310000. Quanto ao software de automóveis o limite superior de bugs será de 5000000 e o limite inferior de 500000. No Linux 3.1 o número de bugs máximo é de 750000 e o mínimo de 75000. Por fim, nos serviços de internet da Google o limite superior de bugs esperado é de 100000000 e o inferior de 10000000. (A fazer o numero de vulnerabilidades)
+Assim, no facebook o número máximo de bugs que podemos encontrar é de 3100000 e o mínimo será 310000. Quanto ao software de automóveis o limite superior de bugs será de 5000000 e o limite inferior de 500000. No Linux 3.1 o número de bugs máximo é de 750000 e o mínimo de 75000. Por fim, nos serviços de internet da Google o limite superior de bugs esperado é de 100000000 e o inferior de 10000000. Quanto ao número de vulnerabilidades, não é possível obter uma estimativa já que não há maneira de serem calculadas a partir do número de linhas de código ou de bugs.
+
+
 ## Pergunta 1.3 ##  
 #### Vulnerabilidades de Projecto ####
 **CWE-73: External Control of File Name or Path**: O software permite, que o input do utilizador, possa controlar ou influenciar ficheiros usados em operações do sistema ficheiros, isto permite que o atacante aceda ou modifique ficheiros dos sistema ou outros ficheiros crucais à aplicação.Este tipo de erro, ocorre quando duas situações se sucedem:
