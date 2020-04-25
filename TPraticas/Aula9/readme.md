@@ -1,5 +1,5 @@
 
-## Pergunta P1.1 - Buffer overflow em várias linguagens ##
+## Pergunta 1.1 - Buffer overflow em várias linguagens ##
 \
 O objectivo do programa é igual para todos, independetemente da linguagem, e este procura imprimir valores para 500 posições de um buffer, porém o buffer apenas tem alocadas 10 posições de memória, como tal seria de esperar o mesmo comportamento, tendo em conta que o algoritmo faz o mesmo, mas não é isso que se verifica, bem pelo contrário, isto deve-se ao facto que as diferentes linguagens tratam de maneira diferente este acesso indevido, que pode causar escrever fora dos limites de memória alocados, aceder a endereços de memória que o programa não deveria ter acesso posteriormente, pode causar a excecução de código malicioso e menos periogoso parar inesperadamente o programa.
 
@@ -25,7 +25,7 @@ Já no programa 0-simple.c, as variáveis são:
 
 Diferente do  RootExploit.c, para explorar o *Stack Buffer Overflow* neste programa é necessário inserir um *input* com no mínimo 65 bytes (77 caracteres) para transbordar o espaço de memória reservado para a variável `buffer`. Assim como no programa anterior, se o byte extra for diferente de zero, o programar escreverá o valor deste byte no endereço de memória da variável `control`, a validará e o programa retornará "YOU WIN!!!"
 ## Pergunta 1.3 ##
-## Pergunta P1.4 ##
+## Pergunta 1.4 ##
 
 Nesta pergunta de forma a conseguirmos o resutlado esperado, é necessário traduzir o resultado pedido em hexadecimal para ascii para verificarmos quais são os caracteres necessários, e verificamos que são abcd, porém como os números hexadecimais são guardados na memória em little endian, detrás para a frente, este deve ser introduzido ao contrário dcba, visto que estamos aceder diretamente na memória, e como o buffer está alocado para 64 caracteres, devem ser introduzidos inicialmente 64 caracteres para exceder os espaço alocado, e poder ser lida a variavél que desejamos, neste caso dcba.
 
