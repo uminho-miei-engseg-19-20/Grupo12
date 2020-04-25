@@ -4,7 +4,7 @@ No programa RootExploit, duas variáveis são declaradas logo no início:
 `pass`: inteiro, inicializada com o valor 0 e de 4 bytes;
 `buff`: array de caracteres de 4 bytes.
 
-Os valores são colocados na *stack* que cresce dos endereços mais altos da memória para os mais baixos, porém a escrita é feita ao contrário e a indexação é dos endereços mais baixos para os mais altos, sendo assim, no programa RootExploit, os 4 bytes da variável `pass`são alocados primeiro e em seguida, são alocados os 4 bytes da variável `buff`. 
+Os valores são colocados na *stack* que cresce dos endereços mais altos da memória para os mais baixos, porém a escrita é feita ao contrário e a indexação é dos endereços mais baixos para os mais altos, sendo assim, no programa RootExploit, os 4 bytes da variável `pass` são alocados primeiro e em seguida, são alocados os 4 bytes da variável `buff`. 
 
 Neste programa, ao inserir 5 caracteres no *input* (variável `buff`), esse quinto caracter irá ultrapassar o espaço de memória reservado para a variável e será escrito na variável `pass` que está alocada logo após. Se o valor desse caracter for diferente de 0, o programa reconhecerá a `pass` como verdadeira e validará a condição onde só deveria ser validade se o *input* correspondesse à *password* correta.
 
