@@ -20,7 +20,7 @@ Os valores são colocados na *stack* que cresce dos endereços mais altos da mem
 
 Neste programa, ao inserir 5 caracteres no *input* (variável `buff`), esse quinto caracter irá ultrapassar o espaço de memória reservado para a variável e será escrito na variável `pass` que está alocada logo após. Se o valor desse caracter for diferente de 0, o programa reconhecerá a `pass` como verdadeira e validará a condição onde só deveria ser validade se o *input* correspondesse à *password* correta.  
 
-![RootExploit.c](./imagens/tp1_2_1.png)
+![RootExploit.c](./imagens/Tp1_2_1.png)
 
 **0-simple.c**  
 Já no programa 0-simple.c, as variáveis são:  
@@ -42,7 +42,7 @@ A figura abaixo exemplifica uma exploração desta vulnerabilidade inserindo o n
 
 Nesta pergunta de forma a conseguirmos o resutlado esperado, é necessário traduzir o resultado pedido em hexadecimal para ascii para verificarmos quais são os caracteres necessários, e verificamos que são abcd, porém como os números hexadecimais são guardados na memória em little endian, detrás para a frente, este deve ser introduzido ao contrário dcba, visto que estamos aceder diretamente na memória, e como o buffer está alocado para 64 caracteres, devem ser introduzidos inicialmente 64 caracteres para exceder os espaço alocado, e poder ser lida a variavél que desejamos, neste caso dcba.  
 
-![1-match.c](./imagens/tp1_4.png)  
+![1-match.c](./imagens/tp_4.png)  
 
 ## Pergunta 1.5 ##
 ## Pergunta 1.6 ##
