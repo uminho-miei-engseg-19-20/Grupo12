@@ -27,7 +27,7 @@ Diferente do  RootExploit.c, para explorar o *Stack Buffer Overflow* neste progr
 ## Pergunta 1.3 ##
 ## Pergunta P1.4 ##
 
-Nesta pergunta de forma a conseguirmos o resutlado esperado, é necessário traduzir o resultado pedido em hexadecimal para ascii para verificarmos quais são os caracteres necessários, e verificamos que são abcd, porém como os números inteiros são guardados memória como little endian, detrás para a frente, este deve ser introduzido ao contrário dcba, e como o buffer está alocado para 64 caracteres, devem ser introduzidos inicialmente 64 caracteres até ser lido a variavél que desejamos, neste caso dcba.
+Nesta pergunta de forma a conseguirmos o resutlado esperado, é necessário traduzir o resultado pedido em hexadecimal para ascii para verificarmos quais são os caracteres necessários, e verificamos que são abcd, porém como os números hexadecimais são guardados na memória em little endian, detrás para a frente, este deve ser introduzido ao contrário dcba, visto que estamos aceder diretamente na memória, e como o buffer está alocado para 64 caracteres, devem ser introduzidos inicialmente 64 caracteres para exceder os espaço alocado, e poder ser lida a variavél que desejamos, neste caso dcba.
 
 ## Pergunta 1.5 ##
 ## Pergunta 1.6 ##
