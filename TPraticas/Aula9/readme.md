@@ -9,7 +9,7 @@ Em Python, também não percorreu mais do que as 10 posições, lançando um err
 
 
 ## Pergunta 1.2 ##
-Após analisar e testar os programas RootExploit.c e 0-simple.c, foi encontrada vulnerabilidade **Stack Buffer Overflow**, devido ao fato do *input* recebido pela função `gets` não efetua uma verificação de tamanho.
+Após analisar e testar os programas RootExploit.c e 0-simple.c, foi encontrada vulnerabilidade **Stack Buffer Overflow**, devido ao fato do *input* recebido pela função `gets` não efetua uma verificação de tamanho. 
 
 No programa RootExploit, duas variáveis são declaradas logo no início:
 `pass`: inteiro, inicializada com o valor 0 e de 4 bytes;
