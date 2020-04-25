@@ -11,6 +11,7 @@ Em Python, também não percorreu mais do que as 10 posições, lançando um err
 ## Pergunta 1.2 ##
 Após analisar e testar os programas RootExploit.c e 0-simple.c, foi encontrada vulnerabilidade **Stack Buffer Overflow**, devido ao fato do *input* recebido pela função `gets` não efetua uma verificação de tamanho.  
 
+
 **RootExploit.c:**  
 No programa RootExploit.c, duas variáveis são declaradas logo no início:  
 `pass`: inteiro, inicializada com o valor 0 e de 4 bytes;   
@@ -20,7 +21,7 @@ Os valores são colocados na *stack* que cresce dos endereços mais altos da mem
 
 Neste programa, ao inserir 5 caracteres no *input* (variável `buff`), esse quinto caracter irá ultrapassar o espaço de memória reservado para a variável e será escrito na variável `pass` que está alocada logo após. Se o valor desse caracter for diferente de 0, o programa reconhecerá a `pass` como verdadeira e validará a condição onde só deveria ser validade se o *input* correspondesse à *password* correta.  
 
-![RootExploit.c](./imagens/Tp1_2_1.png)
+![RootExploit.c](./imagens/Tp1_2_1.png)  
 
 **0-simple.c**  
 Já no programa 0-simple.c, as variáveis são:  
@@ -29,7 +30,7 @@ Já no programa 0-simple.c, as variáveis são:
 
 Diferente do  RootExploit.c, para explorar o *Stack Buffer Overflow* neste programa é necessário inserir um *input* com no mínimo 65 bytes (77 caracteres) para transbordar o espaço de memória reservado para a variável `buffer`. Assim como no programa anterior, se o byte extra for diferente de zero, o programar escreverá o valor deste byte no endereço de memória da variável `control`, a validará e o programa retornará "YOU WIN!!!"  
 
-![0-simple.c](./imagens/tp1_2_2.png)
+![0-simple.c](./imagens/tp1_2_2.png)  
 
 ## Pergunta 1.3 ##
 O programa **ReadOverflow.c** aloca um *buffer* de tamanho 100 e pede ao utilizador para inserir o número de caracteres que o *input* terá. Feito isto, é pedido que o utilizador insira a frase desejada. Por não colocar um terminador da string, este programa possibilita que o utilizador insira um número maior que o *buffer* e maior que a frase inserida, expondo então, o conteúdo da memória.  
@@ -42,7 +43,7 @@ A figura abaixo exemplifica uma exploração desta vulnerabilidade inserindo o n
 
 Nesta pergunta de forma a conseguirmos o resutlado esperado, é necessário traduzir o resultado pedido em hexadecimal para ascii para verificarmos quais são os caracteres necessários, e verificamos que são abcd, porém como os números hexadecimais são guardados na memória em little endian, detrás para a frente, este deve ser introduzido ao contrário dcba, visto que estamos aceder diretamente na memória, e como o buffer está alocado para 64 caracteres, devem ser introduzidos inicialmente 64 caracteres para exceder os espaço alocado, e poder ser lida a variavél que desejamos, neste caso dcba.  
 
-![1-match.c](./imagens/tp_4.png)  
+![1-match.c](./imagens/tp1._4.png)  
 
 ## Pergunta 1.5 ##
 ## Pergunta 1.6 ##
