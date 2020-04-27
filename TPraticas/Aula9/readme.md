@@ -46,4 +46,17 @@ Nesta pergunta de forma a conseguirmos o resutlado esperado, é necessário trad
 ![1-match.c](./imagens/tp1._4.png)  
 
 ## Pergunta 1.5 ##
+
+Para mitigar as vulnerabilidades de Buffer overflow foram utilizadas técnicas de programação defensiva e as alterações efetuadas foram:
+* Verificação do espaço através da criação de uma variavel alocando apenas o necessário;
+* Verificação do número de argumentos introduzidos;
+* Controlo do tamanho das strings que vão ser copiadas através de strcpy;
+* Verificação dos tamanhos das strings copiadas através de strlen permitindo nos evitar overflow.
+
 ## Pergunta 1.6 ##
+
+Após corrermos o programa stack.c obtivemos um erro de falha de segmentação e as técnicas de programação defensiva utilizadas foram:
+* Substituição da função de strncpy pela strcpy evitando erros de buffer overflow;
+* Verificação do espaço alocado para armazenar a string e colocar o buffer com esse valor;
+* Verificação da existência do ficheiro "badfile" pois esta função pode retornar NULL.
+
