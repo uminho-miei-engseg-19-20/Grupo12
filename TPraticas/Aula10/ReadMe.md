@@ -41,4 +41,9 @@ Ao executar o código, o erro **segmentation fault** novamente, como na questão
 ![segmentation_fault.c](./img/tp10_2.png)
 
 #### 4. Utilize as várias técnicas de programação defensiva introduzidas na aula teórica para mitigar as vulnerabilidades. ####
+
+Uma das formas de mitigar a vulnerabilidade encontrada na função *vulneravel()* do programa *underflow.c* seria validar a variável `tamanho` não apenas para o tamanho máximo, como já está feito no código, mas verificar se a variável também está dentro do limite mínimo de tamanho.
+
 ##### 4.1 Explique as alterações que fez. #####
+
+Para aplicar a validação citada acima, foi alterada a condição `if (tamanho < MAX_SIZE)` para `if (tamanho < MAX_SIZE && tamanho > MIN_SIZE)` e assim, permitir que apenas valores não negativos sejam aceitos. 
