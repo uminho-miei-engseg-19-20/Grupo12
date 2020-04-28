@@ -27,4 +27,4 @@ Ao executar o código, ocorreu o erro **segmentation fault** pois não é possí
 #### 2. Complete o main() de modo a demonstrar essa vulnerabilidade? ####
 #### 3. Ao executar dá algum erro? Qual? ####
 #### 4. Utilize as várias técnicas de programação defensiva introduzidas na aula teórica para mitigar as vulnerabilidades. ####
-#### 4.1 Explique as alterações que fez. ####
+##### 4.1 Explique as alterações que fez. #####
