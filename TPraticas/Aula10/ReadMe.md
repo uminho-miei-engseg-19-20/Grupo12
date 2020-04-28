@@ -25,7 +25,7 @@ Ao executar o código, ocorreu o erro **segmentation fault** pois não é possí
 #### 1. Qual a vulnerabilidade que existe na função vulneravel() e quais os efeitos da mesma? ####
 A vulnerabilidade encontrada na função *vulneravel()* do programa *underflow.c* é chamada *Buffer Underflow* e definida pelo CWE 124 (https://cwe.mitre.org/data/definitions/124.html). Esta falha ocorre quando o ponteiro tenta referenciar um local de memória anterior ao início do *buffer*. Na função *vulneravel()*, esta vulnerabilidade acontece devido ao fato da variável `tamanho` não ser validada.  
 
-Como a variável `tamanho-real`é do tipo `size_t`, se a for passado o valor 0 para a variável `tamanho`, um erro ocorrerá, pois a operação resultará em um valor negativo e o tipo `size_t` só aceita inteiros positivos.
+Como a variável `tamanho-real`é do tipo `size_t`, se a for passado o valor `0` para a variável `tamanho`, ocorrerá um *underflow*, pois a operação resultará em um valor negativo e o tipo `size_t` só aceita inteiros positivos.
 
 #### 2. Complete o main() de modo a demonstrar essa vulnerabilidade? ####
 #### 3. Ao executar dá algum erro? Qual? ####
