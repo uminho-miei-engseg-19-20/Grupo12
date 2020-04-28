@@ -18,6 +18,8 @@ int main() {
 #### 3. Ao executar dá algum erro? Qual? ####
 Ao executar o código, ocorreu o erro **segmentation fault** pois não é possível alocar a quantidade de memória pretendida.
 
+![segmentation_fault.c](./img/tp10_1.png)
+
 ## Pergunta 1.2 ##
 
 #### 1. Qual a vulnerabilidade que existe na função vulneravel() e quais os efeitos da mesma? ####
