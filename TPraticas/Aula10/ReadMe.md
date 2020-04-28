@@ -46,4 +46,4 @@ Uma das formas de mitigar a vulnerabilidade encontrada na função *vulneravel()
 
 ##### 4.1 Explique as alterações que fez. #####
 
-Para aplicar a validação citada acima, foi alterada a condição `if (tamanho < MAX_SIZE)` para `if (tamanho < MAX_SIZE && tamanho > MIN_SIZE)` e assim, permitir que apenas valores não negativos sejam aceitos. 
+Para aplicar a validação citada acima, foi alterada a condição `if (tamanho < MAX_SIZE)` para `if (tamanho < MAX_SIZE && tamanho > MIN_SIZE)` e assim, permitir que apenas valores não negativos sejam aceitos. O código modificado encontra-se no ficheiro underflow.c.
