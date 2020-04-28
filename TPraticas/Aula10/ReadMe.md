@@ -6,6 +6,12 @@ Esta vulnerabilidade ocorre quando o valor de um inteiro é demasiado grande par
 
 ##### 2. Complete o main() de modo a demonstrar essa vulnerabilidade.
 
+```
+int main() {
+        char *matrix;
+        vulneravel(matrix,100000000,100000000,'a');
+}
+```
 
 ##### 3. Ao executar dá algum erro? Qual?
 
