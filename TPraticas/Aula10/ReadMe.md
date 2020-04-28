@@ -36,5 +36,9 @@ int main() {
 }
 ```
 #### 3. Ao executar dá algum erro? Qual? ####
+Ao executar o código, o erro **segmentation fault** novamente, como na questão anterior, ocorreu.
+
+![segmentation_fault.c](./img/tp10_2.png)
+
 #### 4. Utilize as várias técnicas de programação defensiva introduzidas na aula teórica para mitigar as vulnerabilidades. ####
 ##### 4.1 Explique as alterações que fez. #####
