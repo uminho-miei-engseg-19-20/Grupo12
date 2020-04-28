@@ -29,6 +29,7 @@ Como a variável `tamanho-real`é do tipo `size_t`, se a for passado o valor `0`
 
 #### 2. Complete o main() de modo a demonstrar essa vulnerabilidade? ####
 
+Como citado anteriormente, ao passar o valor `0` para a variável `tamanho`, a variável `tamanho-real` passará a ser `-1` e resultará no *buffer underflow*.
 ```
 int main() {
         vulneravel("aaa", 0);
