@@ -28,6 +28,12 @@ A vulnerabilidade encontrada na função *vulneravel()* do programa *underflow.c
 Como a variável `tamanho-real`é do tipo `size_t`, se a for passado o valor `0` para a variável `tamanho`, ocorrerá um *underflow*, pois a operação resultará em um valor negativo e o tipo `size_t` só aceita inteiros positivos.
 
 #### 2. Complete o main() de modo a demonstrar essa vulnerabilidade? ####
+
+```
+int main() {
+        vulneravel("aaa", 0);
+}
+```
 #### 3. Ao executar dá algum erro? Qual? ####
 #### 4. Utilize as várias técnicas de programação defensiva introduzidas na aula teórica para mitigar as vulnerabilidades. ####
 ##### 4.1 Explique as alterações que fez. #####
