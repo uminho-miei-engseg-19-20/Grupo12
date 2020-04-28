@@ -6,6 +6,8 @@ Esta vulnerabilidade ocorre quando o valor de um inteiro é demasiado grande par
 
 ##### 2. Complete o main() de modo a demonstrar essa vulnerabilidade.
 
+Para demonstrar a vulnerabilidade é necessário que o valor de `x*y` seja superior ao valor máximo permitido a se guardar num `size_t`. O código abaixo exemplifica uma forma de explorar esta falha.
+
 ```
 int main() {
         char *matrix;
