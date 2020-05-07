@@ -124,8 +124,8 @@ def verify(func, txt):
 # nif_validado = verify(valida_nif_nic, 'NIF (apenas números):  ')
 # print(nif_validado)
 
-valor_validado = verify(valida_valor, 'Valor a pagar: ').replace(" ", "")
-print(valor_validado)
+# valor_validado = verify(valida_valor, 'Valor a pagar: ').replace(" ", "")
+# print(valor_validado)
 
 # nic_validado = verify(valida_nif_nic, 'NIC (apenas números): ')
 # print(nic_validado)
