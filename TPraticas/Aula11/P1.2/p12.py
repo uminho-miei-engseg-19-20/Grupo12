@@ -71,13 +71,13 @@ def valida_cartao(numero):
     """
     Valida número de cartão de crédito
     de acordo com o algoritmo de Luhn
-    :param number: número do cartão de crédito a ser validado
+    :param numero: número do cartão de crédito a ser validado
     :return: True se o número do cartão for válido
              False se o número do cartão não for válido
     """
 
     numero = numero.replace(' ', '')
-    if 19 < len(numero) < 12:
+    if 19 < len(numero) < 12 or not numero.isdigit():
         return False
     soma = 0
     parity = len(numero) % 2
