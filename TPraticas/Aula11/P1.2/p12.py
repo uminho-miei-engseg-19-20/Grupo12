@@ -4,7 +4,13 @@ from calendar import monthrange
 
 
 def valida_nome(nome):
-    if nome.replace(" ", "").isalpha() and len(nome) <= 64:
+    """
+    Valida nome com até 64 caracteres
+    :param nome: nome a ser validado
+    :return: True se o nome for válido
+             False se o nome não for válido
+    """
+    if nome.replace(" ", "").isalpha() and 3 <= len(nome) <= 64:
         return True
     else:
         return False
@@ -12,10 +18,13 @@ def valida_nome(nome):
 
 def valida_nif_nic(numero, d):
     """
-    Validação do número de identificação fiscal (NIF)
+    Valida NIF ou NIC
     utilizando o algoritmo "módulo 11"
+    :param numero: número do documento a ser validado
+    :param d: número de dígitos do documento a ser validado
+    :return: True se o documento for válido
+             False se o documento não for válido
     """
-
     digitos_nif = d
     if not numero.isdigit() or len(numero) != digitos_nif:
         return False
@@ -28,7 +37,12 @@ def valida_nif_nic(numero, d):
 
 
 def valida_data(data):
-
+    """
+    Valida a data de nascimento
+    :param data: data de nascimento a ser validada
+    :return: True se a data for válida
+             False se a data não for válida
+    """
     try:
         day, month, year = data.split('/')
         data_nasc = datetime.datetime(int(year), int(month), int(day))
@@ -41,6 +55,12 @@ def valida_data(data):
 
 
 def valida_valor(valor):
+    """
+    Valida o valor a ser pago
+    :param valor: valor a ser validado
+    :return: True se o valor for válido
+             False se o valor não for válido
+    """
     if re.match(r'^[1-9]\d*([.,]\d{1,2})?$', valor) is not None and len(valor) < 20:
         return True
     else:
@@ -52,8 +72,8 @@ def valida_cartao(numero):
     Valida número de cartão de crédito
     de acordo com o algoritmo de Luhn
     :param number: número do cartão de crédito a ser validado
-    :return: True, se o número do cartão for válido
-             False, se o número do cartão não for válido
+    :return: True se o número do cartão for válido
+             False se o número do cartão não for válido
     """
 
     numero = numero.replace(' ', '')
@@ -70,7 +90,13 @@ def valida_cartao(numero):
     return soma % 10 == 0
 
 
-def validade_cartao(data):
+def exp_cartao(data):
+    """
+    Valida a validade do cartão de crédito
+    :param data: data de validade a ser validada
+    :return: True se a data for válida
+             False se a data não for válida
+    """
     try:
         month, year = data.split('/')
         # Número de dias do mês inserido
@@ -86,6 +112,12 @@ def validade_cartao(data):
 
 
 def valida_cvc(cvc):
+    """
+    Valida o CVV/CVC
+    :param cvc: CVV/CVC a ser validado
+    :return: True se o CVV/CVC for válido
+             False se o CVV/CVC não for válido
+    """
     if not cvc.isdigit() or len(cvc) > 4 or len(cvc) < 3:
         return False
     else:
@@ -136,6 +168,6 @@ def verify(func, txt):
 # cvc_validado = verify(valida_cvc, 'CVC/CVV: ')
 # print(cvc_validado)
 
-# expdate_validada = verify(validade_cartao, 'Insira a validade do Cartão de crédito no formato MM/AAAA:  ')
+# expdate_validada = verify(exp_cartao, 'Insira a validade do Cartão de crédito no formato MM/AAAA:  ')
 # print(expdate_validada)
 
