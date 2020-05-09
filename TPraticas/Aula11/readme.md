@@ -7,15 +7,20 @@
 
  ## Pergunta 1.2 ##
  
-Para a realização deste trabalho, optamos pelo Python onde para garantir que todos os *inputs* fossem *strings*, utilizamos a função `str()` porém, a função `input()` do Python já recebe os valores inseridos como *string*.
+Para a realização deste trabalho, optamos pelo Python onde para garantir que todos os inputs fossem *strings*, utilizamos a função `str()` porém, a função `input()` do Python já recebe os valores inseridos como *string*.
 
 A validação dos inputs foram feitas da seguinte forma:
 
-+ nome
-+ número de identificação fiscal (NIF)
-+ número de identificação de cidadão (NIC)
-+ data de nascimento
-+ valor a pagar
-+ numero de cartão de crédito
-+ validade do cartão
-+ CVC/CVV
++ **nome** (`valida_nome()`): Verifica se o valor é composto apenas por letras com o método `isalpha()` e limita o tamanho da string (de 3 a 64 caracteres).
+
++ **número de identificação fiscal (NIF) e número de identificação de cidadão (NIC)** (`valida_nif_nic()`): Verifica se o valor é composto apenas por digitos e verifica também se o tamanho é o correto (9 dígitos para o NIF e 8 para o NIC). Feito isto, implementamos o algoritmo módulo 11 para validar o dígito verificador.
+
++ **data de nascimento** (`valida_data()`): Primeiramente, dividimos a data inserida e caso o *input* não for válido, a função irá retornar falso. Além disso, a função utiliza o médoto `datetime` do Python para verificar se a data inserida é válida e confere se a data é menor que a data atual.
+
++ **valor a pagar**(`valida_valor()`): Utiliza expressões regulares para validar o *input* além de verificar o tamanho máximo.
+
++ **numero de cartão de crédito** (`valida_cartao()`): Primeiramente a função verifica se o tamanho do número inserido é válido e se o *input* é composto apenas por números. Feito isto, valida o número do cartão de crédito utilizando o algoritmo de Luhn.
+
++ **validade do cartão** (`exp_cartao()`): Funciona de maneira semelhante à função `valida_data()` porém, utilizamos o método `monthrange()` do módulo `calendar` para verificar a quantidade de dias do mês inserido.
+
++ **CVC/CVV** (`valida_cvc()`): Verifica se o valor inserido é composto apenas por números e se o tamanho é 3 ou 4.
