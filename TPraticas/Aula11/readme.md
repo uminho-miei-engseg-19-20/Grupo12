@@ -24,3 +24,5 @@ A validação dos inputs foram feitas da seguinte forma:
 + **validade do cartão** (`exp_cartao()`): Funciona de maneira semelhante à função `valida_data()` porém, utilizamos o método `monthrange()` do módulo `calendar` para verificar a quantidade de dias do mês inserido.
 
 + **CVC/CVV** (`valida_cvc()`): Verifica se o valor inserido é composto apenas por números e se o tamanho é 3 ou 4.
+
+A função `vefiry()` é utilizada para chamar as funções citadas acima em um ciclo que só termina se os valores inseridos forem validados. 
