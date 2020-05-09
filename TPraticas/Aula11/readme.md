@@ -12,7 +12,7 @@ Para explorar a vulnerabilidade referente à função `system`, poderíamos reco
 
 Onde o atacante poderia utilizar o programa para correr comandos não autorizados.
 
-Já para explorar a vulnerabilidade referente à não validação dos metacaracteres inseridos, o atacante poderia ter acesso aos diretórios por meio do comando:
+Já para explorar a vulnerabilidade referente à não validação dos metacaracteres inseridos, o atacante poderia ter acesso aos diretórios, por exemplo, através do comando:
 
 `./filetype /etc/passwd`
 
