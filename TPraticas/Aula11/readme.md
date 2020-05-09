@@ -4,8 +4,14 @@ As duas vulnerabildades presentes neste código são relativas a utilização da
 A função `system` utilizada executa a variável `buf` como argumento, com as variáveis de ambiente do processo-pai, sendo assim, um atacante poderia tirar partido da injeção de separadores utilizando o metacaracter ';'.
 
 #### 2. Forneça o código/passos/linha de comando que permitem explorar cada uma das vulnerabilidades identificadas na linha anterior. ####
+Para explorar a vulnerabilidade referente à função `system`, poderíamos recorrer ao código:
+
+`./filetype nome_do_ficheiro; comando_executado_pelo_atacante`
+
+Onde o atacante poderia utilizar o programa para correr comandos não autorizados.
 
 #### 3. O que aconteceria se o seu programa tivesse permissões setuid root? ####
+Caso o programa vulnerável tenha permissões setuid root, o atacante poderia facilmente correr comandos para ter acesso à informações sensíveis, como por exemplo, através do comando: `./filetype nome_do_ficheiro; cat /etc/passwd` ou `./filetype nome_do_ficheiro; chmod 777 nome_do_ficheiro`.
 
  ## Pergunta 1.2 ##
  
