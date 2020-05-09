@@ -1,5 +1,7 @@
  ## Pergunta 1.1 ##
  #### 1. Existem pelo menos dois tipos de vulnerabilidades estudadas na aula teórica de "Validação de Input" que podem ser exploradas. Identifique-as. ####
+As duas vulnerabildades presentes neste código são relativas a utilização da função `system`
+A função `system` utilizada executa a variável `buf` como argumento, com as variáveis de ambiente do processo-pai, sendo assim, um atacante poderia tirar partido da injeção de separadores utilizando o metacaracter ';'.
 
 #### 2. Forneça o código/passos/linha de comando que permitem explorar cada uma das vulnerabilidades identificadas na linha anterior. ####
 
