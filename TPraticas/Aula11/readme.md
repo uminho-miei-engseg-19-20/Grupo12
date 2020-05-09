@@ -7,9 +7,9 @@
 
  ## Pergunta 1.2 ##
  
-Para a realização deste trabalho, optamos pelo Python onde para garantir que todos os inputs fossem *strings*, utilizamos a função `str()` porém, a função `input()` do Python já recebe os valores inseridos como *string*.
+Para a realização deste trabalho, optamos pelo Python porque para garantir que todos os inputs são *strings*, utilizamos a função `str()` porém, a função `input()` do Python já recebe os valores inseridos como *string*.
 
-A validação dos inputs foram feitas da seguinte forma:
+As validações dos inputs foram feitas da seguinte forma:
 
 + **nome** (`valida_nome()`): Verifica se o valor é composto apenas por letras com o método `isalpha()` e limita o tamanho da string (de 3 a 64 caracteres).
 
