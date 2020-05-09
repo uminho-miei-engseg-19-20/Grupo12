@@ -1,8 +1,8 @@
  ## Pergunta 1.1 ##
  #### 1. Existem pelo menos dois tipos de vulnerabilidades estudadas na aula teórica de "Validação de Input" que podem ser exploradas. Identifique-as. ####
-As duas vulnerabildades presentes neste código são relativas a utilização da função `system` e ao fato do programa não controlar os tipos de metacaracteres que podem ser aceites.
-A função `system` utilizada executa a variável `buf` como argumento, com as variáveis de ambiente do processo-pai, sendo assim, um atacante poderia utilizar esta função para correr comandos não autorizados.
-Com relação à validação dos metacaracteres, um atacante poderia explorar esta falha através de uma injeção de separadores de pastas, conhecido como *path traversal attack* e então, ter acesso à ficheiros arbitrários.
+As duas vulnerabildades presentes neste código são relativas a utilização da função `system` e ao fato do programa não controlar os tipos de metacaracteres que podem ser aceites.  
+A função `system` utilizada executa a variável `buf` como argumento, com as variáveis de ambiente do processo-pai, sendo assim, um atacante poderia utilizar esta função para correr comandos não autorizados.  
+Com relação à validação dos metacaracteres, um atacante poderia explorar esta falha através de uma injeção de separadores de pastas, conhecido como *path traversal attack* e então, com a ajuda do *autocomplete*, tomar conhecimento de toda estrutura de diretórios do sistema.
 
 
 #### 2. Forneça o código/passos/linha de comando que permitem explorar cada uma das vulnerabilidades identificadas na linha anterior. ####
@@ -12,7 +12,11 @@ Para explorar a vulnerabilidade referente à função `system`, poderíamos reco
 
 Onde o atacante poderia utilizar o programa para correr comandos não autorizados.
 
-Já para explorar a vulnerabilidade referente à não validação dos metacaracteres inseridos, um atacante poderia passar um caminho
+Já para explorar a vulnerabilidade referente à não validação dos metacaracteres inseridos, o atacante poderia ter acesso aos diretórios por meio do comando:
+
+`./filetype /etc/passwd`
+
+Além disto, o invasor poderia utilizar o *autocomplete* (através da tecla TAB) e ter acesso aos nomes dos ficheiros e diretórios de toda a estrutura.
 
 #### 3. O que aconteceria se o seu programa tivesse permissões setuid root? ####
 Caso o programa vulnerável tenha permissões setuid root, o atacante poderia facilmente correr comandos para ter acesso à informações sensíveis, como por exemplo, através do comando: `./filetype nome_do_ficheiro; cat /etc/passwd` ou `./filetype nome_do_ficheiro; chmod 777 nome_do_ficheiro`.
