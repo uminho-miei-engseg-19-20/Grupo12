@@ -67,6 +67,15 @@ Assim, os campos foram completados com:
 
 ![1.11](./imagens/1.11.png)
 
+
+### 12) ###
+Após sabermos o formato da tabela 'employees' devido à alínea anterior bastava-nos alterar o input pretendido num dos campos criando uma nova query e delimintando-as com ';'
+Posto isto, os campos forma preenchidos da seguinte forma:
++**Employee Name**: Smith
++**Authentication TAN**: 3SL99A'; UPDATE SET salary=9999999 where last_name='Smith
+
+![1.12](./imagens/1.12.png)
+
   
     
 
