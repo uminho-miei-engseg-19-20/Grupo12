@@ -57,11 +57,16 @@ Obtendo assim:
 
 
 ### 11) ###
-Neste ponto era pretendido obter todos os dados da tabela 'employees', ssaasadaos foram preenchidos por:
+Neste ponto era pretendido obter todos os dados da tabela 'employees', sabendo que a query era: 
+    
+    SELECT * FROM employees WHERE last_name='" + name + "' AND auth_tan= '" + auth_tan + ""
+   
+Assim, os campos foram completados com: 
 + **Employee Name**: Smith
 + **Authentication TAN**: 3SL99A' or '1'='1';--
 
-Onde a query final foi:
+![1.11](./imagens/1.11.png)
+
   
     
 
