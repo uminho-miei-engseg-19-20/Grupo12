@@ -33,9 +33,9 @@ Conceder a um grupo de utilizadores o direito de alterar tabelas
 
 ### 9) ###
 Obter todos os utilizadores da tabela onde os campos foram preenchidos por:
-    . Smith'
-    . or
-    . '1'='1
++ Smith'
++ or
++ '1'='1
 
     SELECT * FROM user_data WHERE first_name="John" and last_name='Smith' or '1'='1'
     
