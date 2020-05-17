@@ -87,6 +87,45 @@ Assim, a query anterior foi separada da nova utilizando novamente ";"
 
 ![1.13](./imagens/1.13.png)
 
+
+
+## Pergunta 2.1 - XSS ##
+
+### 2) ###
+
+Após testarmos o comando na barra de endereços chegámos à conclusão qe a informação apresentada em ambas as páginas era a mesma.
+
+![2.2](./imagens/2.2.png)
+
+
+### 7) ###
+Depois de executar alguns testes o campo vulnerável descoberto foi o do cartão de crédito, onde executamos:
+
+    <javascript>alert()</javascript>
+    
+    
+### 10) ###
+
+Primeiramente fomos à fonte do JavaScritp através do atalho de teclado : CTRL + SHIFT + I e procurámos pelo ficheiro GoatRouter.js onde encontrámos todas as rotas inclusive a de teste que tinha sido deixada durante a produção da aplicação.
+
+!![2.10.1](./imagens/2.10.1.png)
+!![2.10.2](./imagens/2.10.2.png)
+
+
+### 11) ###
+
+
+
+### 12) ###
+
++ **1**: Solution 4
++ **2**: Solution 3
++ **3**: Solution 1
++ **4**: Solution 2
++ **5**: Solution 4
+
+
+
   
 
   
