@@ -12,4 +12,4 @@ Neste tópico era pretendido alterar o departamento do empregado Tobi Barnett pa
 
     UPDATE Employees SET department='Sales' WHERE first_name='Tobi' AND last_name='Barnett'
     
-![1.3(./imagens/1.3png)  
+![1.3(./imagens/1.3.png)  
