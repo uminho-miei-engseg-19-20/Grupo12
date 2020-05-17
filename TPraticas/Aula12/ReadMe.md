@@ -54,6 +54,15 @@ Obtendo assim:
     SELECT * FROM user_data WHERE Login_Count=1 and userid=1 or 1=1
     
 ![1.10](./imagens/1.10.png)
+
+
+### 11) ###
+Neste ponto era pretendido obter todos os dados da tabela 'employees', ssaasadaos foram preenchidos por:
++ **Employee Name**: Smith
++ **Authentication TAN**: 3SL99A' or '1'='1';--
+
+Onde a query final foi:
+  
     
 
 
