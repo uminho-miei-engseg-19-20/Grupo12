@@ -77,6 +77,18 @@ Posto isto, os campos forma preenchidos da seguinte forma:
 
 ![1.12](./imagens/1.12.png)
 
+
+### 13) ###
+Para apagar os registos feitos pelo utilizador o input foi completado da seguinte forma: 
+    
+    Smith'; DROP TABLE access_log;--
+    
+Assim, a query anterior foi separada da nova utilizando novamente ";"
+
+![1.13](./imagens/1.13.png)
+
+  
+
   
     
 
