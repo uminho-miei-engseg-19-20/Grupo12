@@ -159,8 +159,7 @@ Após várias tentativas as cores encontradas foram:
 
 
 ### 6) ###
-
-A princípio foi necessário realizar um teste com um utilizador do atacante para entender como funciona o processo de *password changing*. Feito isto, foi constatado que o link enviado ao Webwolf continha um *token* que é passado no endereço. Sendo assim, com a ferramenta Burp ligada, foi realizado um pedido de mudança de *password* para o email da vítima (tom@webgoat-cloud.org), ilustrado na figura abaixo.  
+Primeiramente foi necessário realizar um teste com um utilizador do atacante para entender como funciona o processo de *password changing*. Feito isto, foi constatado que o link enviado ao Webwolf continha um *token* que é passado no endereço. Sendo assim, com a ferramenta Burp ligada, foi realizado um pedido de mudança de *password* para o email da vítima (tom@webgoat-cloud.org), ilustrado na figura abaixo.  
 ![6.1](./imagens/6.1.png)
 
 No Burp, foi possível interceptar o *request* feito pela vítima e ao alterar o host para `localhost:9090`, este pedido foi encaminhado para o Webwolf. As figuras abaixo ilustram estes passos.  
@@ -171,7 +170,7 @@ No Burp, foi possível interceptar o *request* feito pela vítima e ao alterar o
 Já no Webwolf, logado como o atacante, recebemos no `Incoming requests` o pedido para alterar a *password* da vítima com o seu respectivo *token*, como mostra a figura abaixo.  
 ![6.4](./imagens/6.4.png)
 
-Em seguida, inserimos o *token* da vítima no endereço de alteração de *password* do WebGoat para chegar à url: `http://localhost:8080/WebGoat/PasswordReset/reset/reset-password/c3b91407-c7c3-4044-8eaa-cc3d98e9792b` e então, finalmente tivemos acesso para alterar a *password* do email da vítima como mostram as figuras a seguir.  
+De seguida, inserimos o *token* da vítima no endereço de alteração de *password* do WebGoat para chegar à url: `http://localhost:8080/WebGoat/PasswordReset/reset/reset-password/c3b91407-c7c3-4044-8eaa-cc3d98e9792b` e então, finalmente tivemos acesso para alterar a *password* do email da vítima como mostram as figuras a seguir.  
 ![6.5](./imagens/6.5.png)
 ![6.6](./imagens/6.6.png)
 
