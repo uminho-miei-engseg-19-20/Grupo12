@@ -131,6 +131,24 @@ Primeiramente fomos à fonte do JavaScritp através do atalho de teclado : CTRL 
 
 ## Pergunta 3.1 - Password Reset ##
 
+### 2) ###
+
+Após seguir as instruções, foi iniciado o WebWolf para aceder ao email e realizar o login, como mostram as figuras abaixo:
+
+![3.2.1](./imagens/3.2.1.png)
+
+
+![3.2.2](./imagens/3.2.2.png)
+
+
+### 3) ###
+
+Após várias tentativas as cores encontradas foram:
+
++ **Admin**: Green
++ **Larry**: Yellow
++ **Tom**: Purple
+
 
 ## Pergunta 4.1 - Vulnerable components ##
 
