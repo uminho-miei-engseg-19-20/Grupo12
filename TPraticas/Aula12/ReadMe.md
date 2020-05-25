@@ -117,6 +117,11 @@ Primeiramente fomos à fonte do JavaScritp através do atalho de teclado : CTRL 
 
 ### 11) ###
 
+Para a realização deste ponto foram abertos a consola e um novo separador com a rota anteriormente encontrada. Nessa rota foi acrescentado o comando: 
+    /<script>webgoat.customjs.phoneHome()<%2Fscript>
+De seguida, na consola foi nos apresentado a resposta.
+     
+
 
 
 ### 12) ###
@@ -152,7 +157,7 @@ Após várias tentativas as cores encontradas foram:
 
 ## Pergunta 4.1 - Vulnerable components ##
 
-### 12 ###
+### 12) ###
 Para explorar a vulnerabilidade presente bastou inserir o seguinte excerto de código:
 
     <java.lang.Integer>1</java.lang.Integer>
