@@ -163,16 +163,16 @@ Após várias tentativas as cores encontradas foram:
 A princípio foi necessário realizar um teste com um utilizadors do atacante para entender como funciona o processo de *password changing*. Feito isto, foi constatado que o link enviado ao Webwolf continha um *token* que é passado no endereço. Sendo assim, foi realizado um pedido de mudança de *password* para o email da vítima (tom@webgoat-cloud.org).  
 Com o auxílio da ferramenta Burp, interceptamos o *request* feito pela vítima e ao alterar o host para `localhost:9090`, este pedido foi encaminhado para o Webwolf.  
 As figuras abaixo ilustram estes passos.
-![6.1](./imagens/burp0.png)
-![6.2](./imagens/burp1.png)
-![6.3](./imagens/burp2.png)
+![6.1](./imagens/6.1.png)
+![6.2](./imagens/6.2.png)
+![6.3](./imagens/6.3.png)
 
 Já no Webwolf, logado como o atacante, recebemos no `Incoming requests` o pedido para alterar a *password* da vítima com o seu respectivo *token*, como mostra a figura abaixo.
-![6.4](./imagens/burp3.png)
+![6.4](./imagens/6.4.png)
 
 Em seguida, inserimos o *token* da vítima no endereço de alteração de *password* do WebGoat para chegar à url: `http://localhost:8080/WebGoat/PasswordReset/reset/reset-password/c3b91407-c7c3-4044-8eaa-cc3d98e9792b` e então, finalmente tivemos acesso para alterar a *password* do email da vítima como mostram as figuras a seguir.
-![6.5](./imagens/burp4.png)
-![6.6](./imagens/burp5.png)
+![6.5](./imagens/6.5.png)
+![6.6](./imagens/6.6.png)
 
 ## Pergunta 4.1 - Vulnerable components ##
 
