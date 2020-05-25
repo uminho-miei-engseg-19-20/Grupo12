@@ -149,7 +149,7 @@ Após seguir as instruções, foi iniciado o WebWolf para aceder ao email e real
 ![3.2.2](./imagens/3.2.2.png)
 
 
-### 3) ###
+### 4) ###
 
 Após várias tentativas as cores encontradas foram:
 
@@ -157,6 +157,8 @@ Após várias tentativas as cores encontradas foram:
 + **Larry**: Yellow
 + **Tom**: Purple
 
+
+### 6) ###
 
 ## Pergunta 4.1 - Vulnerable components ##
 
