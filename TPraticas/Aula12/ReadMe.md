@@ -131,7 +131,13 @@ Primeiramente fomos à fonte do JavaScritp através do atalho de teclado : CTRL 
 
 ## Pergunta 3.1 - Password Reset ##
 
+
 ## Pergunta 4.1 - Vulnerable components ##
+
+### 12 ###
+Para explorar a vulnerabilidade presente bastou inserir o seguinte excerto de código:
+
+    <java.lang.Integer>1</java.lang.Integer>
 
 
 
