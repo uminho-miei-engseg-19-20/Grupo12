@@ -160,9 +160,11 @@ Após várias tentativas as cores encontradas foram:
 
 ### 6) ###
 
-A princípio foi necessário realizar um teste com um utilizadors do atacante para entender como funciona o processo de *password changing*. Feito isto, foi constatado que o link enviado ao Webwolf continha um *token* que é passado no endereço. Sendo assim, foi realizado um pedido de mudança de *password* para o email da vítima (tom@webgoat-cloud.org).  
-Com o auxílio da ferramenta Burp, interceptamos o *request* feito pela vítima e ao alterar o host para `localhost:9090`, este pedido foi encaminhado para o Webwolf. As figuras abaixo ilustram estes passos.  
+A princípio foi necessário realizar um teste com um utilizador do atacante para entender como funciona o processo de *password changing*. Feito isto, foi constatado que o link enviado ao Webwolf continha um *token* que é passado no endereço. Sendo assim, com a ferramenta Burp ligada, foi realizado um pedido de mudança de *password* para o email da vítima (tom@webgoat-cloud.org), ilustrado na figura abaixo.  
 ![6.1](./imagens/6.1.png)
+
+No Burp, foi possível interceptar o *request* feito pela vítima e ao alterar o host para `localhost:9090`, este pedido foi encaminhado para o Webwolf. As figuras abaixo ilustram estes passos.  
+
 ![6.2](./imagens/6.2.png)
 ![6.3](./imagens/6.3.png)
 
